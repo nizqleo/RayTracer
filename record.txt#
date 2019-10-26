@@ -1,0 +1,14 @@
+Vec3f->color
+
+camera->generate_ray(i,j)
+
+scene->find_first_hit(ray)
+
+Hit: obj
+
+matertial:BRDF, reflectance
+
+lightsource
+
+DotProduct
+
