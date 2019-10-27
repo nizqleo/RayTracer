@@ -10,7 +10,9 @@ namespace rt{
 
 class Material{
 public:
-
+    Vec3f getBRDF(){
+        return Vec3f(1,1,1);
+    }
 
 private:
 };

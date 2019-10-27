@@ -100,6 +100,8 @@ public:
     { x /= r, y /= r, z /= r; return *this; }
     Vec3& operator *= (const T &r)
     { x *= r, y *= r, z *= r; return *this; }
+    Vec3& operator += (const Vec3<T> &v)
+    { return Vec3f<T>(x + v.z, y + v.y, z + v.z);}
     Vec3 crossProduct(const Vec3<T> &v) const
     { return Vec3<T>(y * v.z - z * v.y, z * v.x - x * v.z, x * v.y - y * v.x); }
     T norm() const
@@ -130,6 +132,8 @@ public:
     { return Vec3<T>(v.x * r, v.y * r, v.z * r); }
     friend Vec3 operator / (const T &r, const Vec3 &v)
     { return Vec3<T>(r / v.x, r / v.y, r / v.z); }
+    friend Vec3 operator / (const Vec3 &v, const T &r)
+    { return Vec3<T>(v.x/r, v.y/r, v.z/r); }
 
     friend std::ostream& operator << (std::ostream &s, const Vec3<T> &v)
     {

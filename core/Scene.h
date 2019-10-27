@@ -24,7 +24,19 @@ public:
 	Scene(){};
 
 	void createScene(Value& scenespecs);
-	Hit find_first_hit(Ray);
+	
+	/* go through all the shape in the scene and sort by the distance.
+	 * find the one with smallest distance.
+	 */ 
+	std::pair<Shape*, Hit> find_first_hit(Ray);
+
+
+
+	// getters
+	std::vector<LightSource*>::iterator getlightSourceBegin(){return lightSources.begin();}
+	std::vector<LightSource*>::iterator getlightSourceEnd(){return lightSources.end();}
+	
+	friend class RayTracer;
 
 private:
 
