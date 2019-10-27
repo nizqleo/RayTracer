@@ -12,7 +12,11 @@
 namespace rt{
 
 class AreaLight:public LightSource{
+public:
+    AreaLight(){}
+    AreaLight(Vec3f inten):LightSource(inten){}
 
+private:
 
 };
 

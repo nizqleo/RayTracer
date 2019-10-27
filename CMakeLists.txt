@@ -6,7 +6,8 @@ project("Ray Tracer" C CXX)
 
 include_directories(
 parsers
-math)
+math
+./)
 
 
 file (GLOB rapidjson_headers

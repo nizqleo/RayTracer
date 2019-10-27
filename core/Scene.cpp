@@ -16,8 +16,22 @@ namespace rt{
  */
 void Scene::createScene(Value& scenespecs){
 
-	//----------parse json object to populate scene-----------
+	// read backgroundcolor
+	if(scenespecs.HasMember("backgroundcolor"))
+		bgcolor = Vec3f(scenespecs["backgroundcolor"].GetArray());
+	else bgcolor = Vec3f(0,0,0);
 
+	// read lightsources 
+	for(int i = 0; i < scenespecs["lightsources"].GetArray().Size(); i++){
+		LightSource* ls = LightSource::createLightSource(scenespecs["lightsources"][i]);
+		if(ls != NULL) lightSources.push_back(ls);
+	}
+
+	// read shapes
+	for(int i = 0; i < scenespecs["shapes"].GetArray().Size(); i++){
+		Shape* sp = Shape::createShape(scenespecs["shapes"][i]);
+		if(sp != NULL) shapes.push_back(sp);
+	}
 }
 
 std::pair<Shape*, Hit> Scene::find_first_hit(Ray ray){

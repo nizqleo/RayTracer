@@ -11,7 +11,7 @@ Vec3f RayTracer::TracePath(Scene* scene, Ray ray, int nbounces_left){
 	std::pair<Shape*, Hit> hitEvent = scene->find_first_hit(ray);
 
 	if(hitEvent.first == NULL)// didn't hit any thing.
-		return Vec3f(0,0,0);
+		return scene->bgcolor;
 	
 	Material* material = hitEvent.first->getMaterial();
 
@@ -23,9 +23,9 @@ Vec3f RayTracer::TracePath(Scene* scene, Ray ray, int nbounces_left){
 		// point light processing 
 		if((*p)->type == POINTLIGHT){
 
-			float cos_theta = ((*p)->position-hitEvent.second.point).dotProduct(ray.direction);
+			float cos_theta = ((*p)->getPosition()-hitEvent.second.point).dotProduct(ray.direction);
 
-			color += (material->getBRDF() *(*p)->color * cos_theta);
+			color += (material->getBRDF() *(*p)->intensity * cos_theta);
 		}
 	}
 

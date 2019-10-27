@@ -6,8 +6,12 @@
 #ifndef SHAPE_H_
 #define SHAPE_H_
 
+#include "rapidjson/document.h"
 #include "core/RayHitStructs.h"
 #include "core/Material.h"
+
+
+using namespace rapidjson;
 
 namespace rt{
 
@@ -18,7 +22,7 @@ public:
 	// Constructors
 	//
 	Shape();
-
+	Shape(Material* m):material(m){}
 	//
 	// Destructor (must be overriden in subclass)
 	//
@@ -30,6 +34,7 @@ public:
 	virtual Hit intersect(Ray)=0;
 
 	// getter
+    static Shape* createShape(Value& shapeSpecs);
 
 	Material* getMaterial(){return material;}
 protected:

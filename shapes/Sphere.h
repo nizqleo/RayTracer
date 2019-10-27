@@ -7,7 +7,7 @@
 #ifndef SPHERE_H_
 #define SPHERE_H_
 
-#include "math/geometry.h"
+
 #include "core/RayHitStructs.h"
 #include "core/Shape.h"
 
@@ -22,6 +22,7 @@ public:
 	//
 	Sphere();
 	Sphere(Vec3f center, float radius):center(center), radius(radius){};
+	Sphere(Vec3f center, float radius, Material* m):Shape(m),center(center), radius(radius){};
 
 	virtual ~Sphere();
 
