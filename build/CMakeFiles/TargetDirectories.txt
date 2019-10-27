@@ -1,0 +1,5 @@
+/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles/rebuild_cache.dir
+/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles/raytracer.dir
+/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles/vectorexample.dir
+/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles/jsonexample.dir
+/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles/edit_cache.dir
