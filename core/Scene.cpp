@@ -20,6 +20,8 @@ void Scene::createScene(Value& scenespecs){
 
 }
 
-
+std::pair<Shape*, Hit> Scene::find_first_hit(Ray){
+	
+}
 
 } //namespace rt

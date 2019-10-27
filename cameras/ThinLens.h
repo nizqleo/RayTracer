@@ -29,7 +29,7 @@ public:
 	// print function (implementing abstract function of base class)
 	//
 	void printCamera();
-
+	Ray generate_ray(int i, int j);
 };
 
 

@@ -3,7 +3,10 @@
  	"type":"pinhole",
  	"width":800,
  	"height":800,
- 	"fov":35
+	 "fov":35,
+	 "position":[-1, 0, 0],
+	 "lookAt":[0,0,0],
+	 "up":[0,0,1]
  },
  "scene":{
  	"backgroundcolor":[0.01, 0.01, 0.01],

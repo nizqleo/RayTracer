@@ -27,6 +27,8 @@ struct Ray{
 		// ramdonly generate direction.
 	}
 	Ray(Vec3f posi, Vec3f dire):OriginalPoint(posi), direction(dire){}
+
+
 };
 
 

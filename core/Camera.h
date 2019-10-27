@@ -20,7 +20,7 @@ public:
 	// Constructors
 	//
 	Camera(){};
-	Camera(int height, int width, int fov):height(height), width(width), fov(fov){};
+	Camera(int height, int width, int fov, Vec3f position, Vec3f lookAt, Vec3f up){};
 
 	//
 	// Destructor
@@ -40,14 +40,19 @@ public:
 	virtual void printCamera()=0;
 
 
-
-	//
-	// other camera functions (to complete)
-	//
-
-
-
-	Ray generate_ray(int i, int j);
+	/**	generate ray for every pixel
+	 *  pixels are distributed like:
+	 * 				0-->j
+	 * 				| 
+	 * 				v i
+	 * 
+	 * 0  0  0   100 0  0       0  0  0    255   0 255
+	 * 0  0  0    0 255 175     0  0  0     0    0  0
+	 * 0  0  0    0  0  0       0 15 175    0    0  0
+	 * 255 0 255  0  0  0       0  0  0    255  255 255
+	 * 
+	 **/
+	virtual Ray generate_ray(int i, int j)=0;
 
 
 
@@ -87,6 +92,18 @@ protected:
 	int height;
 	int width;
 	int fov; //field of view
+
+	Vec3f position;
+	Vec3f lookAt;
+	Vec3f up;
+
+	/** Description of camera coordinate:
+	 * 				^ y
+	 * 				|
+	 * 			x<--0
+	 *  and Z is the front direction.
+	 **/
+	Matrix44f Cam2World;
 
 };
 

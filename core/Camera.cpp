@@ -10,8 +10,32 @@
 
 namespace rt{
 
-	Camera::~Camera(){};
+	Camera::Camera(int height, int width, int fov, 	Vec3f position, Vec3f lookAt, Vec3f up):
+	height(height), width(width), fov(fov), position(position), lookAt(lookAt), up(up){
+		Vec3f forward = (position - lookAt).normalize(); 
+    	Vec3f right = -forward.dotProduct(up);
+ 
+		Cam2World[0][0] = right.x; 
+		Cam2World[0][1] = right.y; 
+		Cam2World[0][2] = right.z; 
+		Cam2World[0][3] = 0; 
+		Cam2World[1][0] = up.x; 
+		Cam2World[1][1] = up.y; 
+		Cam2World[1][2] = up.z; 
+		Cam2World[1][3] = 0; 
+		Cam2World[2][0] = forward.x; 
+		Cam2World[2][1] = forward.y; 
+		Cam2World[2][2] = forward.z; 
+		Cam2World[2][3] = 0;
 
+		Cam2World[3][0] = position.x; 
+		Cam2World[3][1] = position.y; 
+		Cam2World[3][2] = position.z; 
+		Cam2World[3][3] =1;
+		
+	}
+
+	Camera::~Camera(){};
 
 
 /**
@@ -37,7 +61,10 @@ Camera* Camera::createCamera(Value& cameraSpecs){
 	if (cameraType.compare("pinhole")==0){
 		return new Pinhole(cameraSpecs["width"].GetInt(),
 				cameraSpecs["height"].GetInt(),
-				cameraSpecs["fov"].GetInt());
+				cameraSpecs["fov"].GetInt(),
+				cameraSpecs["position"].GetArray(),
+				Vec3f(cameraSpecs["lookAt"].GetArray()),
+				Vec3f(cameraSpecs["up"].GetArray()));
 
 	}else if (cameraType.compare("thinlens")==0){
 		return new ThinLens();
@@ -46,6 +73,7 @@ Camera* Camera::createCamera(Value& cameraSpecs){
 	return 0;
 
 }
+
 
 
 

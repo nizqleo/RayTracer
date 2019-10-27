@@ -14,8 +14,8 @@ namespace rt{
 	//
 	// Pinhole constructor (example)
 	//
-	Pinhole::Pinhole(int width, int height, int fov):Camera(width, height, fov){
-
+	Pinhole::Pinhole(int width, int height, int fov, Vec3f position, Vec3f lookAt, Vec3f up)
+	:Camera(width, height, fov,  position,  lookAt,  up){
 
 		// to fill
 
@@ -32,6 +32,15 @@ namespace rt{
 	}
 
 
+	Ray Pinhole::generate_ray(int i, int j){
+
+		// compute ray in camera coordinate first
+		float u = 2*tan(fov/2)/height;
+		Vec3f direction((width/2-j),(height/2-i),1);
+		Vec3f final_direction;
+		Cam2World.multDirMatrix(direction.normalize(), final_direction);
+		return Ray(position, final_direction);
+}
 
 } //namespace rt
 
