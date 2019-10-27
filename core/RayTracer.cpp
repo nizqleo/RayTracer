@@ -10,6 +10,9 @@ namespace rt{
 Vec3f RayTracer::TracePath(Scene* scene, Ray ray, int nbounces_left){
 	std::pair<Shape*, Hit> hitEvent = scene->find_first_hit(ray);
 
+	if(hitEvent.first == NULL)// didn't hit any thing.
+		return Vec3f(0,0,0);
+	
 	Material* material = hitEvent.first->getMaterial();
 
 	// emittance
