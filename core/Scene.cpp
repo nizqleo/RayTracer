@@ -49,9 +49,11 @@ std::pair<Shape*, Hit> Scene::find_first_hit(Ray ray){
 			}
 		}		
 	}
-	if( min_shape != NULL ){
-		return std::make_pair(min_shape, closestHit);
-	}
+
+	return std::make_pair(min_shape, closestHit);
 }
 
+void Scene::printScene(){
+	std::cout<<"shapes information:\n";
+}
 } //namespace rt

@@ -9,6 +9,7 @@
 #include "rapidjson/document.h"
 #include "math/geometry.h"
 
+
 using namespace rapidjson;
 
 namespace rt{
@@ -26,6 +27,11 @@ public:
     virtual Vec3f getPosition(){
         return Vec3f(0,0,0);
     }
+
+    virtual bool isPointLight(){
+        return false;
+    }
+
     friend class RayTracer;
 
 

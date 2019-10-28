@@ -24,11 +24,13 @@ public:
         specularexponent = m.specularexponent;
         diffusecolor = m.diffusecolor;
     }
-    Vec3f getBRDF(){
-        return Vec3f(1,1,1);
-    }
 
-private:
+    /** L:from point to light
+     *  
+     **/
+    Vec3f computeBPReflection(Vec3f intensity, Vec3f L, Vec3f N, Vec3f V);
+
+//private:
     float ks;
     float kd;
     int specularexponent;

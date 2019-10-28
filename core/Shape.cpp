@@ -25,8 +25,9 @@ Shape* Shape::createShape(Value& shapeSpecs){
 		std::cerr<<"Shape material not specified"<<std::endl;
 		exit(-1);
 	}
-	Material* m = new Material(shapeSpecs["material"]);
 
+	Material* m = new Material(shapeSpecs["material"]);
+	
 	//return shape object based on shape specs
 	if (shapeType.compare("sphere")==0){
 		return new Sphere(Vec3f(shapeSpecs["center"].GetArray()),

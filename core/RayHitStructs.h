@@ -28,16 +28,18 @@ struct Ray{
 	}
 	Ray(Vec3f posi, Vec3f dire):OriginalPoint(posi), direction(dire){}
 
-
 };
 
 
 struct Hit{
+	Hit(){}
+	Hit(bool e, Vec3f p, Vec3f norm):exist(e), point(p), normVector(norm){}
+	Hit(bool e):exist(e){}
 
-	Vec3f point; //point where ray hits a shape
-	//----------Hit variables to be filled------
+
 	bool exist;
-
+	Vec3f point; //point where ray hits a shape	
+	Vec3f normVector;
 	
 };
 

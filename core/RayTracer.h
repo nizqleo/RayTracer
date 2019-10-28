@@ -26,16 +26,15 @@ public:
 	/* Return the a pixelbuffer with size (height, width),
 	 * Height & Width get from the camera. 
 	 */ 
-	static Vec3f* render(Camera* camera, Scene* scene, int nbounces, int pixel_sample_number = 1);
+	static Vec3f* render(Camera* camera, Scene* scene, int nbounces);
 
 	// take in pixelbuffer (size (height, width)), return a pixel_mapped_buffer
-	static Vec3f* tonemap(Vec3f* pixelbuffer);
+	static Vec3f* tonemap(Vec3f* pixelbuffer, int size);
 
 	static Vec3f TracePath(Scene* scene, Ray ray, int nbounces_left);
-	static int Max_sample_num;
-
-
-
+	
+	static int path_sample_num;
+	static int pixel_sample_num;
 
 private:
 	

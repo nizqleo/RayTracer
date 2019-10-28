@@ -7,7 +7,7 @@
 #define THINLENS_H_
 
 #include "core/Camera.h"
-
+#include "math/geometry.h"
 
 namespace rt{
 
@@ -18,7 +18,7 @@ public:
 	// Constructors
 	//
 	ThinLens():Camera(){};
-	ThinLens(int width, int height, int fov);
+	ThinLens(int width, int height, int fov, Vec3f position, Vec3f lookAt, Vec3f up);
 
 	//
 	//Destructor

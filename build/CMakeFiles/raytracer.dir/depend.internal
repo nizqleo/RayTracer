@@ -82,9 +82,54 @@ CMakeFiles/raytracer.dir/core/Camera.cpp.o
  /home/nizq/Downloads/computer graphic/RayTracer/core/Camera.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/core/Camera.h
 CMakeFiles/raytracer.dir/core/LightSource.cpp.o
+ ..//core/LightSource.h
+ ..//lights/AreaLight.h
+ ..//lights/PointLight.h
+ ..//math/geometry.h
+ ../parsers/rapidjson/allocators.h
+ ../parsers/rapidjson/document.h
+ ../parsers/rapidjson/encodedstream.h
+ ../parsers/rapidjson/encodings.h
+ ../parsers/rapidjson/error/error.h
+ ../parsers/rapidjson/internal/biginteger.h
+ ../parsers/rapidjson/internal/diyfp.h
+ ../parsers/rapidjson/internal/ieee754.h
+ ../parsers/rapidjson/internal/meta.h
+ ../parsers/rapidjson/internal/pow10.h
+ ../parsers/rapidjson/internal/stack.h
+ ../parsers/rapidjson/internal/strfunc.h
+ ../parsers/rapidjson/internal/strtod.h
+ ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/memorystream.h
+ ../parsers/rapidjson/msinttypes/inttypes.h
+ ../parsers/rapidjson/msinttypes/stdint.h
+ ../parsers/rapidjson/rapidjson.h
+ ../parsers/rapidjson/reader.h
+ ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/core/LightSource.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/core/LightSource.h
 CMakeFiles/raytracer.dir/core/Material.cpp.o
+ ..//math/geometry.h
+ ../parsers/rapidjson/allocators.h
+ ../parsers/rapidjson/document.h
+ ../parsers/rapidjson/encodedstream.h
+ ../parsers/rapidjson/encodings.h
+ ../parsers/rapidjson/error/error.h
+ ../parsers/rapidjson/internal/biginteger.h
+ ../parsers/rapidjson/internal/diyfp.h
+ ../parsers/rapidjson/internal/ieee754.h
+ ../parsers/rapidjson/internal/meta.h
+ ../parsers/rapidjson/internal/pow10.h
+ ../parsers/rapidjson/internal/stack.h
+ ../parsers/rapidjson/internal/strfunc.h
+ ../parsers/rapidjson/internal/strtod.h
+ ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/memorystream.h
+ ../parsers/rapidjson/msinttypes/inttypes.h
+ ../parsers/rapidjson/msinttypes/stdint.h
+ ../parsers/rapidjson/rapidjson.h
+ ../parsers/rapidjson/reader.h
+ ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/core/Material.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/core/Material.h
 CMakeFiles/raytracer.dir/core/RayTracer.cpp.o
@@ -94,6 +139,8 @@ CMakeFiles/raytracer.dir/core/RayTracer.cpp.o
  ..//core/RayHitStructs.h
  ..//core/Scene.h
  ..//core/Shape.h
+ ..//lights/AreaLight.h
+ ..//lights/PointLight.h
  ..//math/geometry.h
  ../parsers/rapidjson/allocators.h
  ../parsers/rapidjson/document.h
@@ -148,15 +195,82 @@ CMakeFiles/raytracer.dir/core/Scene.cpp.o
 CMakeFiles/raytracer.dir/core/Shape.cpp.o
  ..//core/Material.h
  ..//core/RayHitStructs.h
+ ..//core/Shape.h
  ..//math/geometry.h
+ ..//shapes/BVH.h
+ ..//shapes/Sphere.h
+ ..//shapes/TriMesh.h
+ ..//shapes/Triangle.h
+ ../parsers/rapidjson/allocators.h
+ ../parsers/rapidjson/document.h
+ ../parsers/rapidjson/encodedstream.h
+ ../parsers/rapidjson/encodings.h
+ ../parsers/rapidjson/error/error.h
+ ../parsers/rapidjson/internal/biginteger.h
+ ../parsers/rapidjson/internal/diyfp.h
+ ../parsers/rapidjson/internal/ieee754.h
+ ../parsers/rapidjson/internal/meta.h
+ ../parsers/rapidjson/internal/pow10.h
+ ../parsers/rapidjson/internal/stack.h
+ ../parsers/rapidjson/internal/strfunc.h
+ ../parsers/rapidjson/internal/strtod.h
+ ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/memorystream.h
+ ../parsers/rapidjson/msinttypes/inttypes.h
+ ../parsers/rapidjson/msinttypes/stdint.h
+ ../parsers/rapidjson/rapidjson.h
+ ../parsers/rapidjson/reader.h
+ ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/core/Shape.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/core/Shape.h
 CMakeFiles/raytracer.dir/lights/AreaLight.cpp.o
  ..//core/LightSource.h
+ ..//math/geometry.h
+ ../parsers/rapidjson/allocators.h
+ ../parsers/rapidjson/document.h
+ ../parsers/rapidjson/encodedstream.h
+ ../parsers/rapidjson/encodings.h
+ ../parsers/rapidjson/error/error.h
+ ../parsers/rapidjson/internal/biginteger.h
+ ../parsers/rapidjson/internal/diyfp.h
+ ../parsers/rapidjson/internal/ieee754.h
+ ../parsers/rapidjson/internal/meta.h
+ ../parsers/rapidjson/internal/pow10.h
+ ../parsers/rapidjson/internal/stack.h
+ ../parsers/rapidjson/internal/strfunc.h
+ ../parsers/rapidjson/internal/strtod.h
+ ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/memorystream.h
+ ../parsers/rapidjson/msinttypes/inttypes.h
+ ../parsers/rapidjson/msinttypes/stdint.h
+ ../parsers/rapidjson/rapidjson.h
+ ../parsers/rapidjson/reader.h
+ ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/lights/AreaLight.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/lights/AreaLight.h
 CMakeFiles/raytracer.dir/lights/PointLight.cpp.o
  ..//core/LightSource.h
+ ..//math/geometry.h
+ ../parsers/rapidjson/allocators.h
+ ../parsers/rapidjson/document.h
+ ../parsers/rapidjson/encodedstream.h
+ ../parsers/rapidjson/encodings.h
+ ../parsers/rapidjson/error/error.h
+ ../parsers/rapidjson/internal/biginteger.h
+ ../parsers/rapidjson/internal/diyfp.h
+ ../parsers/rapidjson/internal/ieee754.h
+ ../parsers/rapidjson/internal/meta.h
+ ../parsers/rapidjson/internal/pow10.h
+ ../parsers/rapidjson/internal/stack.h
+ ../parsers/rapidjson/internal/strfunc.h
+ ../parsers/rapidjson/internal/strtod.h
+ ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/memorystream.h
+ ../parsers/rapidjson/msinttypes/inttypes.h
+ ../parsers/rapidjson/msinttypes/stdint.h
+ ../parsers/rapidjson/rapidjson.h
+ ../parsers/rapidjson/reader.h
+ ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/lights/PointLight.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/lights/PointLight.h
 CMakeFiles/raytracer.dir/main/main.cpp.o
@@ -193,6 +307,27 @@ CMakeFiles/raytracer.dir/main/main.cpp.o
  /home/nizq/Downloads/computer graphic/RayTracer/main/main.cpp
 CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.o
  ..//core/Material.h
+ ..//math/geometry.h
+ ../parsers/rapidjson/allocators.h
+ ../parsers/rapidjson/document.h
+ ../parsers/rapidjson/encodedstream.h
+ ../parsers/rapidjson/encodings.h
+ ../parsers/rapidjson/error/error.h
+ ../parsers/rapidjson/internal/biginteger.h
+ ../parsers/rapidjson/internal/diyfp.h
+ ../parsers/rapidjson/internal/ieee754.h
+ ../parsers/rapidjson/internal/meta.h
+ ../parsers/rapidjson/internal/pow10.h
+ ../parsers/rapidjson/internal/stack.h
+ ../parsers/rapidjson/internal/strfunc.h
+ ../parsers/rapidjson/internal/strtod.h
+ ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/memorystream.h
+ ../parsers/rapidjson/msinttypes/inttypes.h
+ ../parsers/rapidjson/msinttypes/stdint.h
+ ../parsers/rapidjson/rapidjson.h
+ ../parsers/rapidjson/reader.h
+ ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/materials/BlinnPhong.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/materials/BlinnPhong.h
 CMakeFiles/raytracer.dir/shapes/BVH.cpp.o
@@ -200,6 +335,26 @@ CMakeFiles/raytracer.dir/shapes/BVH.cpp.o
  ..//core/RayHitStructs.h
  ..//core/Shape.h
  ..//math/geometry.h
+ ../parsers/rapidjson/allocators.h
+ ../parsers/rapidjson/document.h
+ ../parsers/rapidjson/encodedstream.h
+ ../parsers/rapidjson/encodings.h
+ ../parsers/rapidjson/error/error.h
+ ../parsers/rapidjson/internal/biginteger.h
+ ../parsers/rapidjson/internal/diyfp.h
+ ../parsers/rapidjson/internal/ieee754.h
+ ../parsers/rapidjson/internal/meta.h
+ ../parsers/rapidjson/internal/pow10.h
+ ../parsers/rapidjson/internal/stack.h
+ ../parsers/rapidjson/internal/strfunc.h
+ ../parsers/rapidjson/internal/strtod.h
+ ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/memorystream.h
+ ../parsers/rapidjson/msinttypes/inttypes.h
+ ../parsers/rapidjson/msinttypes/stdint.h
+ ../parsers/rapidjson/rapidjson.h
+ ../parsers/rapidjson/reader.h
+ ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/shapes/BVH.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/shapes/BVH.h
 CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o
@@ -207,6 +362,26 @@ CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o
  ..//core/RayHitStructs.h
  ..//core/Shape.h
  ..//math/geometry.h
+ ../parsers/rapidjson/allocators.h
+ ../parsers/rapidjson/document.h
+ ../parsers/rapidjson/encodedstream.h
+ ../parsers/rapidjson/encodings.h
+ ../parsers/rapidjson/error/error.h
+ ../parsers/rapidjson/internal/biginteger.h
+ ../parsers/rapidjson/internal/diyfp.h
+ ../parsers/rapidjson/internal/ieee754.h
+ ../parsers/rapidjson/internal/meta.h
+ ../parsers/rapidjson/internal/pow10.h
+ ../parsers/rapidjson/internal/stack.h
+ ../parsers/rapidjson/internal/strfunc.h
+ ../parsers/rapidjson/internal/strtod.h
+ ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/memorystream.h
+ ../parsers/rapidjson/msinttypes/inttypes.h
+ ../parsers/rapidjson/msinttypes/stdint.h
+ ../parsers/rapidjson/rapidjson.h
+ ../parsers/rapidjson/reader.h
+ ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/shapes/Sphere.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/shapes/Sphere.h
 CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o
@@ -214,6 +389,26 @@ CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o
  ..//core/RayHitStructs.h
  ..//core/Shape.h
  ..//math/geometry.h
+ ../parsers/rapidjson/allocators.h
+ ../parsers/rapidjson/document.h
+ ../parsers/rapidjson/encodedstream.h
+ ../parsers/rapidjson/encodings.h
+ ../parsers/rapidjson/error/error.h
+ ../parsers/rapidjson/internal/biginteger.h
+ ../parsers/rapidjson/internal/diyfp.h
+ ../parsers/rapidjson/internal/ieee754.h
+ ../parsers/rapidjson/internal/meta.h
+ ../parsers/rapidjson/internal/pow10.h
+ ../parsers/rapidjson/internal/stack.h
+ ../parsers/rapidjson/internal/strfunc.h
+ ../parsers/rapidjson/internal/strtod.h
+ ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/memorystream.h
+ ../parsers/rapidjson/msinttypes/inttypes.h
+ ../parsers/rapidjson/msinttypes/stdint.h
+ ../parsers/rapidjson/rapidjson.h
+ ../parsers/rapidjson/reader.h
+ ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/shapes/TriMesh.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/shapes/TriMesh.h
 CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o
@@ -221,5 +416,25 @@ CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o
  ..//core/RayHitStructs.h
  ..//core/Shape.h
  ..//math/geometry.h
+ ../parsers/rapidjson/allocators.h
+ ../parsers/rapidjson/document.h
+ ../parsers/rapidjson/encodedstream.h
+ ../parsers/rapidjson/encodings.h
+ ../parsers/rapidjson/error/error.h
+ ../parsers/rapidjson/internal/biginteger.h
+ ../parsers/rapidjson/internal/diyfp.h
+ ../parsers/rapidjson/internal/ieee754.h
+ ../parsers/rapidjson/internal/meta.h
+ ../parsers/rapidjson/internal/pow10.h
+ ../parsers/rapidjson/internal/stack.h
+ ../parsers/rapidjson/internal/strfunc.h
+ ../parsers/rapidjson/internal/strtod.h
+ ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/memorystream.h
+ ../parsers/rapidjson/msinttypes/inttypes.h
+ ../parsers/rapidjson/msinttypes/stdint.h
+ ../parsers/rapidjson/rapidjson.h
+ ../parsers/rapidjson/reader.h
+ ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/shapes/Triangle.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/shapes/Triangle.h

@@ -19,6 +19,9 @@ public:
     Vec3f getPosition(){
         return position;
     }
+    bool isPointLight(){
+        return true;
+    }
 private:
     Vec3f position;
 

@@ -33,10 +33,10 @@ namespace PPMWriter{
 		std::ofstream ofs(filename, std::ios::out | std::ios::binary);
 		ofs << "P6\n" << width << " " << height << "\n255\n";
 		for (uint32_t i = 0; i < height * width; ++i) {
-		char r = (char)(framebuffer[i].x);
-		char g = (char)(framebuffer[i].y);
-		char b = (char)(framebuffer[i].z);
-		ofs << r << g << b;
+			char r = (char)(framebuffer[i].x);
+			char g = (char)(framebuffer[i].y);
+			char b = (char)(framebuffer[i].z);
+			ofs << r << g << b;
 		}
 
 		ofs.close();

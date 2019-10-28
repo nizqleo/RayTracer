@@ -20,7 +20,7 @@ public:
 	// Constructors
 	//
 	Camera(){};
-	Camera(int height, int width, int fov, Vec3f position, Vec3f lookAt, Vec3f up){};
+	Camera(int height, int width, int fov, Vec3f position, Vec3f lookAt, Vec3f up);
 
 	//
 	// Destructor

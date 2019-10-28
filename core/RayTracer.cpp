@@ -3,39 +3,40 @@
  *
  */
 #include "RayTracer.h"
-
+#include "lights/PointLight.h"
+#include "lights/AreaLight.h"
 
 namespace rt{
+int RayTracer::path_sample_num;
+int RayTracer::pixel_sample_num;
 
 Vec3f RayTracer::TracePath(Scene* scene, Ray ray, int nbounces_left){
+	if(nbounces_left < 0) return Vec3f(0,0,0);
 	std::pair<Shape*, Hit> hitEvent = scene->find_first_hit(ray);
 
 	if(hitEvent.first == NULL)// didn't hit any thing.
 		return scene->bgcolor;
 	
+	std::cout<<"hit"<<std::endl;
 	Material* material = hitEvent.first->getMaterial();
-
+	
 	// emittance
-
 	Vec3f color;
 
 	for(std::vector<LightSource*>::iterator p = scene->lightSources.begin(); p != scene->lightSources.end(); p++){
 		// point light processing 
-		if((*p)->type == POINTLIGHT){
-
-			float cos_theta = ((*p)->getPosition()-hitEvent.second.point).dotProduct(ray.direction);
-
-			color += (material->getBRDF() *(*p)->intensity * cos_theta);
+		if((*p)->isPointLight() ){
+			color += material->computeBPReflection((*p)->intensity, (*p)->getPosition()-hitEvent.second.point, hitEvent.second.normVector, -ray.direction);
 		}
 	}
 
-	const float p = 1/(2*3.14);
-	for(int sample_num = 0; sample_num < RayTracer::Max_sample_num; sample_num++){
+	const double p = 1/(2*M_PI);
+	for(int sample_num = 0; sample_num < RayTracer::path_sample_num; sample_num++){
 		Ray newray(hitEvent.second.point);
 
-		Vec3f incoming = RayTracer::TracePath(scene, newray, nbounces_left-1);
-		float cos_theta = newray.direction.dotProduct(ray.direction);
-		color += (material->getBRDF() * incoming * cos_theta / p);
+		Vec3f enviromentIncoming = RayTracer::TracePath(scene, newray, nbounces_left-1);
+		
+		color += material->computeBPReflection(enviromentIncoming, newray.direction, hitEvent.second.normVector, -ray.direction);
 	}
 
 	return color;// + emittence
@@ -50,21 +51,26 @@ Vec3f RayTracer::TracePath(Scene* scene, Ray ray, int nbounces_left){
  *
  * @return a pixel buffer containing pixel values in linear RGB format
  */
-Vec3f* RayTracer::render(Camera* camera, Scene* scene, int nbounces, int pixel_sample_num = 1){
+Vec3f* RayTracer::render(Camera* camera, Scene* scene, int nbounces){
 	Vec3f* pixelbuffer=new Vec3f[camera->getWidth()*camera->getHeight()];
 
-	//----------main rendering function to be filled------
-
-	for(int i = 0; i < camera->getWidth(); i++){
+	// std::cout<<"0 0"<<camera->generate_ray(0, 0).direction<<std::endl;
+	// std::cout<<"0 400"<<camera->generate_ray(0, 400).direction<<std::endl;
+	
+	// std::cout<<"400 0"<<camera->generate_ray(400, 0).direction<<std::endl;
+	
+	// std::cout<<"400 400"<<camera->generate_ray(400, 400).direction<<std::endl;
+	
+	
+	for(int i = 0; i < camera->getHeight(); i++){
 		for(int j = 0; j < camera->getWidth(); j++){
 			// for every pixel in the image, do.
 			Vec3f pixel_color;
-			for(int round = 0; round < pixel_sample_num; round++){
+			for(int round = 0; round < RayTracer::pixel_sample_num; round++){
 				Ray ray = camera->generate_ray(i, j);
 				pixel_color= RayTracer::TracePath(scene, ray, nbounces-1);
 			}
-
-			pixelbuffer[i*camera->getWidth() + j] = pixel_color/pixel_sample_num;
+			pixelbuffer[i*camera->getWidth() + j] = pixel_color/RayTracer::pixel_sample_num;
 		}
 	}
 	return pixelbuffer;
@@ -78,13 +84,12 @@ Vec3f* RayTracer::render(Camera* camera, Scene* scene, int nbounces, int pixel_s
  *
  * @return the tonemapped image
  */
-Vec3f* RayTracer::tonemap(Vec3f* pixelbuffer){
+Vec3f* RayTracer::tonemap(Vec3f* pixelbuffer, int size){
 
-	//---------tonemapping function to be filled--------
-
-
+	for(int i = 0; i < size; i++){
+		pixelbuffer[i] *= 255;
+	}
 	return pixelbuffer;
-
 }
 
 } //namespace rt

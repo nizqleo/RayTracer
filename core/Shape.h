@@ -22,11 +22,16 @@ public:
 	// Constructors
 	//
 	Shape();
-	Shape(Material* m):material(m){}
+	Shape(Material* m){
+		material = m;
+	}
 	//
 	// Destructor (must be overriden in subclass)
 	//
-	virtual ~Shape();
+	virtual ~Shape(){
+		if (material != NULL)
+			delete material;
+	}
 
 	//
 	// Shape abstract methods (to be implemented by subclasses)
@@ -36,7 +41,9 @@ public:
 	// getter
     static Shape* createShape(Value& shapeSpecs);
 
-	Material* getMaterial(){return material;}
+	Material* getMaterial(){
+		return material;
+	}
 protected:
 
 	Material * material;

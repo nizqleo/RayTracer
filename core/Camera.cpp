@@ -12,12 +12,15 @@ namespace rt{
 
 	Camera::Camera(int height, int width, int fov, 	Vec3f position, Vec3f lookAt, Vec3f up):
 	height(height), width(width), fov(fov), position(position), lookAt(lookAt), up(up){
-		Vec3f forward = (position - lookAt).normalize(); 
-    	Vec3f right = -forward.dotProduct(up);
+		Vec3f forward = (lookAt-position).normalize(); 
+		up = up - up.dotProduct(forward)*forward;
+		up = up.normalize();
+    	Vec3f left = -forward.crossProduct(up);
+		left = left.normalize();
  
-		Cam2World[0][0] = right.x; 
-		Cam2World[0][1] = right.y; 
-		Cam2World[0][2] = right.z; 
+		Cam2World[0][0] = left.x; 
+		Cam2World[0][1] = left.y; 
+		Cam2World[0][2] = left.z; 
 		Cam2World[0][3] = 0; 
 		Cam2World[1][0] = up.x; 
 		Cam2World[1][1] = up.y; 
@@ -32,6 +35,9 @@ namespace rt{
 		Cam2World[3][1] = position.y; 
 		Cam2World[3][2] = position.z; 
 		Cam2World[3][3] =1;
+
+		
+		std::cout<<Cam2World<<std::endl;
 		
 	}
 
@@ -62,7 +68,7 @@ Camera* Camera::createCamera(Value& cameraSpecs){
 		return new Pinhole(cameraSpecs["width"].GetInt(),
 				cameraSpecs["height"].GetInt(),
 				cameraSpecs["fov"].GetInt(),
-				cameraSpecs["position"].GetArray(),
+				Vec3f(cameraSpecs["position"].GetArray()),
 				Vec3f(cameraSpecs["lookAt"].GetArray()),
 				Vec3f(cameraSpecs["up"].GetArray()));
 

@@ -30,6 +30,7 @@ public:
 	 */ 
 	std::pair<Shape*, Hit> find_first_hit(Ray ray);
 
+	void printScene();
 
 
 	// getters

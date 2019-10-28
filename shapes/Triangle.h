@@ -16,6 +16,8 @@ namespace rt{
 
 class Triangle: public Shape{
 public:
+
+    Triangle(){}
 	Triangle(Vec3f point1, Vec3f point2, Vec3f point3){
         point[0] = point1;
         point[1] = point2;
@@ -31,6 +33,8 @@ public:
 	// Functions that need to be implemented, since Sphere is a subclass of Shape
 	//
 	Hit intersect(Ray ray);
+
+    ~Triangle(){}
 
 private:
     Vec3f point[3];

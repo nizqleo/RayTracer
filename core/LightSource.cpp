@@ -8,7 +8,7 @@
 
 namespace rt{
 
-LightSource* createLightSource(Value& lightsourceSpecs){
+LightSource* LightSource::createLightSource(Value& lightsourceSpecs){
         // type
     if (!lightsourceSpecs.HasMember("type")){
 		std::cerr<<"lightsource type not specified"<<std::endl;
@@ -19,10 +19,10 @@ LightSource* createLightSource(Value& lightsourceSpecs){
 	//return lightsource object based on lightsource specs
 	if (lightsourceType.compare("pointlight")==0){
 		return new PointLight(Vec3f(lightsourceSpecs["position"].GetArray()),
-				lightsourceSpecs["intensity"].GetArray());
+				Vec3f(lightsourceSpecs["intensity"].GetArray()));
 
 	}else if (lightsourceType.compare("arealight")==0){
-		return new AreaLight(lightsourceSpecs["intensity"].GetArray());
+		return new AreaLight(Vec3f(lightsourceSpecs["intensity"].GetArray()));
 	}
     std::cerr<<"lightsource creating failed.\n";
 	return NULL;
