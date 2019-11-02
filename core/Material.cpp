@@ -15,10 +15,17 @@ Material::Material(Value& materialSpecs){
 }
 
 Vec3f Material::computeBPReflection(Vec3f intensity, Vec3f L, Vec3f N, Vec3f V){
+    
+    float diffuseValue =L.dotProduct(N);
+    float specularValue = N.dotProduct((L+V).normalize());
+    if(diffuseValue < 0) diffuseValue = 0;
+    if(specularValue < 0) specularValue = 0;
+
     //diffuse factor
-    Vec3f color = (diffusecolor*intensity)*(kd*L.dotProduct(N));
+    Vec3f color = (diffusecolor*intensity)*(kd*diffuseValue);
     //specular factor
-    color += ks*pow(N.dotProduct((L+V)/(L+V).length()), specularexponent)*intensity;
+    color += ks*pow(specularValue, specularexponent)*intensity;
+
     return color;
 }
 

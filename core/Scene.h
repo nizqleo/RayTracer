@@ -32,11 +32,9 @@ public:
 
 	void printScene();
 
-
 	// getters
-	std::vector<LightSource*>::iterator getlightSourceBegin(){return lightSources.begin();}
-	std::vector<LightSource*>::iterator getlightSourceEnd(){return lightSources.end();}
-	
+	bool shadowCheck(LightSource* p, std::pair<Shape*, Hit> Event);
+
 	friend class RayTracer;
 
 private:

@@ -31,7 +31,7 @@ namespace rt{
 
 	Ray ThinLens::generate_ray(int i, int j){
 		std::cout<<"Oops! Temperate function called!"<<std::endl;
-		return Vec3f(0,0,0);
+		return Ray(Vec3f(0,0,0), Vec3f(0,0,0));
 	}
 
 } //namespace rt

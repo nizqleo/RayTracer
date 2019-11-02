@@ -29,7 +29,6 @@ namespace PPMWriter{
 	template<typename T>
 	void PPMWriter(const int width,const int height,Vec3<T>* framebuffer, const char* filename){
 
-
 		std::ofstream ofs(filename, std::ios::out | std::ios::binary);
 		ofs << "P6\n" << width << " " << height << "\n255\n";
 		for (uint32_t i = 0; i < height * width; ++i) {

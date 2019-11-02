@@ -12,6 +12,12 @@ rapidjson/document.h
 core/RayHitStructs.h
 ../core/core/RayHitStructs.h
 
+..//core/LightSource.h
+rapidjson/document.h
+../core/rapidjson/document.h
+math/geometry.h
+../core/math/geometry.h
+
 ..//core/Material.h
 rapidjson/document.h
 ../core/rapidjson/document.h
@@ -21,6 +27,32 @@ math/geometry.h
 ..//core/RayHitStructs.h
 math/geometry.h
 ../core/math/geometry.h
+stdlib.h
+-
+time.h
+-
+
+..//core/RayTracer.h
+math/geometry.h
+../core/math/geometry.h
+core/Camera.h
+../core/core/Camera.h
+core/Scene.h
+../core/core/Scene.h
+core/RayHitStructs.h
+../core/core/RayHitStructs.h
+
+..//core/Scene.h
+vector
+-
+rapidjson/document.h
+../core/rapidjson/document.h
+core/LightSource.h
+../core/core/LightSource.h
+core/Shape.h
+../core/core/Shape.h
+core/RayHitStructs.h
+../core/core/RayHitStructs.h
 
 ..//core/Shape.h
 rapidjson/document.h
@@ -29,6 +61,14 @@ core/RayHitStructs.h
 ../core/core/RayHitStructs.h
 core/Material.h
 ../core/core/Material.h
+
+..//lights/AreaLight.h
+core/LightSource.h
+../lights/core/LightSource.h
+
+..//lights/PointLight.h
+core/LightSource.h
+../lights/core/LightSource.h
 
 ..//math/geometry.h
 cstdlib
@@ -43,6 +83,12 @@ cmath
 -
 rapidjson/document.h
 ../math/rapidjson/document.h
+
+..//parsers/PPMWriter.h
+iostream
+-
+math/geometry.h
+../parsers/math/geometry.h
 
 ../parsers/rapidjson/allocators.h
 rapidjson.h
@@ -142,6 +188,14 @@ limits
 ../rapidjson.h
 ../parsers/rapidjson/rapidjson.h
 
+../parsers/rapidjson/istreamwrapper.h
+stream.h
+../parsers/rapidjson/stream.h
+iosfwd
+-
+ios
+-
+
 ../parsers/rapidjson/memorystream.h
 stream.h
 ../parsers/rapidjson/stream.h
@@ -222,23 +276,57 @@ rapidjson.h
 encodings.h
 ../parsers/rapidjson/encodings.h
 
-/home/nizq/Downloads/computer graphic/RayTracer/cameras/Pinhole.cpp
+/home/nizq/Downloads/computer graphic/RayTracer/core/RayTracer.cpp
+RayTracer.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/RayTracer.h
+lights/PointLight.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/lights/PointLight.h
+lights/AreaLight.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/lights/AreaLight.h
+
+/home/nizq/Downloads/computer graphic/RayTracer/core/RayTracer.h
+math/geometry.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/math/geometry.h
+core/Camera.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/core/Camera.h
+core/Scene.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/core/Scene.h
+core/RayHitStructs.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/core/RayHitStructs.h
+
+/home/nizq/Downloads/computer graphic/RayTracer/core/Scene.cpp
+Scene.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/Scene.h
+
+/home/nizq/Downloads/computer graphic/RayTracer/core/Scene.h
+vector
+-
+rapidjson/document.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/rapidjson/document.h
+core/LightSource.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/core/LightSource.h
+core/Shape.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/core/Shape.h
+core/RayHitStructs.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/core/RayHitStructs.h
+
+/home/nizq/Downloads/computer graphic/RayTracer/main/main.cpp
 iostream
 -
-Pinhole.h
-/home/nizq/Downloads/computer graphic/RayTracer/cameras/Pinhole.h
-
-/home/nizq/Downloads/computer graphic/RayTracer/cameras/Pinhole.h
+fstream
+-
+rapidjson/document.h
+/home/nizq/Downloads/computer graphic/RayTracer/main/rapidjson/document.h
+rapidjson/istreamwrapper.h
+/home/nizq/Downloads/computer graphic/RayTracer/main/rapidjson/istreamwrapper.h
+math/geometry.h
+/home/nizq/Downloads/computer graphic/RayTracer/main/math/geometry.h
+parsers/PPMWriter.h
+/home/nizq/Downloads/computer graphic/RayTracer/main/parsers/PPMWriter.h
+core/RayTracer.h
+/home/nizq/Downloads/computer graphic/RayTracer/main/core/RayTracer.h
 core/Camera.h
-/home/nizq/Downloads/computer graphic/RayTracer/cameras/core/Camera.h
-
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/Sphere.cpp
-Sphere.h
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/Sphere.h
-
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/Sphere.h
-core/RayHitStructs.h
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/core/RayHitStructs.h
-core/Shape.h
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/core/Shape.h
+/home/nizq/Downloads/computer graphic/RayTracer/main/core/Camera.h
+core/Scene.h
+/home/nizq/Downloads/computer graphic/RayTracer/main/core/Scene.h
 

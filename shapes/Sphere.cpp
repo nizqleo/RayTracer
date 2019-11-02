@@ -17,17 +17,17 @@ namespace rt{
 	 *
 	 */
 	Hit Sphere::intersect(Ray ray){
-		double edge = (center-ray.OriginalPoint).length();
+		double edge2 = (center-ray.OriginalPoint).norm();
 		double l = (center-ray.OriginalPoint).dotProduct(ray.direction);
 		//std::cout<<center<<' '<<ray.OriginalPoint<<' '<<l<<' '<<ray.direction<<std::endl;
 		if(l <= 0)
 			return Hit(false);
 		
-		double dist = sqrt(edge*edge-l*l);
+		double dist = sqrt(edge2-l*l);
 		if(dist > radius)
 			return Hit(false);
 
-		double cut = sqrt(radius*radius-dist*dist);
+		double cut = sqrt(radius*radius-edge2+l*l);
 		Vec3f point = ray.OriginalPoint + ray.direction*(l-cut);
 		
 		assert(abs((point-center).length() - radius)<1);

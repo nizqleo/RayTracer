@@ -11,34 +11,30 @@ int RayTracer::path_sample_num;
 int RayTracer::pixel_sample_num;
 
 Vec3f RayTracer::TracePath(Scene* scene, Ray ray, int nbounces_left){
-	if(nbounces_left < 0) return Vec3f(0,0,0);
+	Vec3f color(0);
+	if(nbounces_left < 0)
+		return color;
+
 	std::pair<Shape*, Hit> hitEvent = scene->find_first_hit(ray);
 
 	if(hitEvent.first == NULL)// didn't hit any thing.
 		return scene->bgcolor;
-	
-	std::cout<<"hit"<<std::endl;
 	Material* material = hitEvent.first->getMaterial();
 	
-	// emittance
-	Vec3f color;
 
 	for(std::vector<LightSource*>::iterator p = scene->lightSources.begin(); p != scene->lightSources.end(); p++){
 		// point light processing 
-		if((*p)->isPointLight() ){
+		if((*p)->isPointLight() && scene->shadowCheck(*p, hitEvent)){
 			color += material->computeBPReflection((*p)->intensity, (*p)->getPosition()-hitEvent.second.point, hitEvent.second.normVector, -ray.direction);
 		}
 	}
 
 	const double p = 1/(2*M_PI);
 	for(int sample_num = 0; sample_num < RayTracer::path_sample_num; sample_num++){
-		Ray newray(hitEvent.second.point);
-
+		Ray newray(hitEvent.second);
 		Vec3f enviromentIncoming = RayTracer::TracePath(scene, newray, nbounces_left-1);
-		
-		color += material->computeBPReflection(enviromentIncoming, newray.direction, hitEvent.second.normVector, -ray.direction);
+		color += material->computeBPReflection(enviromentIncoming, newray.direction, hitEvent.second.normVector, -ray.direction) *p;
 	}
-
 	return color;// + emittence
 }
 
@@ -68,7 +64,7 @@ Vec3f* RayTracer::render(Camera* camera, Scene* scene, int nbounces){
 			Vec3f pixel_color;
 			for(int round = 0; round < RayTracer::pixel_sample_num; round++){
 				Ray ray = camera->generate_ray(i, j);
-				pixel_color= RayTracer::TracePath(scene, ray, nbounces-1);
+				pixel_color += RayTracer::TracePath(scene, ray, nbounces-1);
 			}
 			pixelbuffer[i*camera->getWidth() + j] = pixel_color/RayTracer::pixel_sample_num;
 		}

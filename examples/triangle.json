@@ -1,0 +1,37 @@
+{"nbounces":1,
+ "pixel_sample_num":1,
+ "path_sample_num":3,
+ "camera":{
+ 	"type":"pinhole",
+ 	"width":800,
+ 	"height":800,
+	 "fov":90,
+	 "position":[-1, 0, 0],
+	 "lookAt":[0,0,0],
+	 "up":[0,0,1]
+ },
+ "scene":{
+ 	"backgroundcolor":[0.1, 0.1, 0.1],
+ 	"lightsources":[
+ 		{
+ 		"type":"pointlight", 
+ 		"position": [-1, 0, 0], 
+ 		"intensity":[1.0, 1.0, 1.0]
+		 } 
+ 	],
+ 	"shapes":[
+		 {
+			"type":"Traingle", 
+			"point1":[0, 0, 1],
+			"point2":[0, -1, 0],
+			"point3":[0, 1, 0],
+			"material":{
+				"ks":0,
+				"kd":1,
+				"specularexponent":0,
+				"diffusecolor":[0, 0, 1]
+				}
+			}
+ 	]
+ }
+}

@@ -53,6 +53,24 @@ std::pair<Shape*, Hit> Scene::find_first_hit(Ray ray){
 	return std::make_pair(min_shape, closestHit);
 }
 
+bool Scene::shadowCheck(LightSource* p, std::pair<Shape*, Hit> Event){
+	Vec3f hit2light = p->getPosition()-Event.second.point;
+	float length = hit2light.length();
+	Ray ray(Event.second.point, hit2light/length);
+	
+	for(std::vector<Shape*>::iterator p = shapes.begin(); p != shapes.end(); p++){
+		Hit hit = (*p)->intersect(ray);
+		if(hit.exist != false){
+			float distance = (ray.OriginalPoint-hit.point).length();
+			if(distance < length && (*p) != Event.first){
+				return false;
+			}
+		}		
+	}
+
+	return true;
+}
+
 void Scene::printScene(){
 	std::cout<<"shapes information:\n";
 }
