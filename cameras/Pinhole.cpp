@@ -41,7 +41,7 @@ namespace rt{
 
 		Cam2World.multDirMatrix(direction.normalize(), final_direction);
 		//std::cout<<direction<<' '<<final_direction<<std::endl;
-		return Ray(position, final_direction);
+		return Ray(position, final_direction.normalize());
 }
 
 } //namespace rt

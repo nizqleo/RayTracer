@@ -527,6 +527,33 @@ materials/BlinnPhong.cpp.s:
 	$(MAKE) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.s
 .PHONY : materials/BlinnPhong.cpp.s
 
+materials/Texture.o: materials/Texture.cpp.o
+
+.PHONY : materials/Texture.o
+
+# target to build an object file
+materials/Texture.cpp.o:
+	$(MAKE) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/materials/Texture.cpp.o
+.PHONY : materials/Texture.cpp.o
+
+materials/Texture.i: materials/Texture.cpp.i
+
+.PHONY : materials/Texture.i
+
+# target to preprocess a source file
+materials/Texture.cpp.i:
+	$(MAKE) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/materials/Texture.cpp.i
+.PHONY : materials/Texture.cpp.i
+
+materials/Texture.s: materials/Texture.cpp.s
+
+.PHONY : materials/Texture.s
+
+# target to generate assembly for a file
+materials/Texture.cpp.s:
+	$(MAKE) -f CMakeFiles/raytracer.dir/build.make CMakeFiles/raytracer.dir/materials/Texture.cpp.s
+.PHONY : materials/Texture.cpp.s
+
 shapes/BVH.o: shapes/BVH.cpp.o
 
 .PHONY : shapes/BVH.o
@@ -715,6 +742,9 @@ help:
 	@echo "... materials/BlinnPhong.o"
 	@echo "... materials/BlinnPhong.i"
 	@echo "... materials/BlinnPhong.s"
+	@echo "... materials/Texture.o"
+	@echo "... materials/Texture.i"
+	@echo "... materials/Texture.s"
 	@echo "... shapes/BVH.o"
 	@echo "... shapes/BVH.i"
 	@echo "... shapes/BVH.s"

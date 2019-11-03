@@ -46,6 +46,7 @@ public:
     Vec2() : x(0), y(0) {}
     Vec2(T xx) : x(xx), y(xx) {}
     Vec2(T xx, T yy) : x(xx), y(yy) {}
+    Vec2(rapidjson::Value array){x = array[0].GetFloat(); y = array[1].GetFloat();}
     Vec2 operator + (const Vec2 &v) const
     { return Vec2(x + v.x, y + v.y); }
     Vec2 operator / (const T &r) const

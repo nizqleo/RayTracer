@@ -109,6 +109,7 @@ CMakeFiles/raytracer.dir/core/LightSource.cpp.o: ../core/LightSource.cpp
 CMakeFiles/raytracer.dir/core/LightSource.cpp.o: ../core/LightSource.h
 
 CMakeFiles/raytracer.dir/core/Material.cpp.o: ../math/geometry.h
+CMakeFiles/raytracer.dir/core/Material.cpp.o: ../parsers/PPMWriter.h
 CMakeFiles/raytracer.dir/core/Material.cpp.o: ../parsers/rapidjson/allocators.h
 CMakeFiles/raytracer.dir/core/Material.cpp.o: ../parsers/rapidjson/document.h
 CMakeFiles/raytracer.dir/core/Material.cpp.o: ../parsers/rapidjson/encodedstream.h
@@ -123,6 +124,7 @@ CMakeFiles/raytracer.dir/core/Material.cpp.o: ../parsers/rapidjson/internal/stac
 CMakeFiles/raytracer.dir/core/Material.cpp.o: ../parsers/rapidjson/internal/strfunc.h
 CMakeFiles/raytracer.dir/core/Material.cpp.o: ../parsers/rapidjson/internal/strtod.h
 CMakeFiles/raytracer.dir/core/Material.cpp.o: ../parsers/rapidjson/internal/swap.h
+CMakeFiles/raytracer.dir/core/Material.cpp.o: ../parsers/rapidjson/istreamwrapper.h
 CMakeFiles/raytracer.dir/core/Material.cpp.o: ../parsers/rapidjson/memorystream.h
 CMakeFiles/raytracer.dir/core/Material.cpp.o: ../parsers/rapidjson/msinttypes/inttypes.h
 CMakeFiles/raytracer.dir/core/Material.cpp.o: ../parsers/rapidjson/msinttypes/stdint.h
@@ -330,6 +332,31 @@ CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.o: ../parsers/rapidjson/reader
 CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.o: ../parsers/rapidjson/stream.h
 CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.o: ../materials/BlinnPhong.cpp
 CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.o: ../materials/BlinnPhong.h
+
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../core/Material.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../math/geometry.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/allocators.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/document.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/encodedstream.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/encodings.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/error/error.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/internal/biginteger.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/internal/diyfp.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/internal/ieee754.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/internal/meta.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/internal/pow10.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/internal/stack.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/internal/strfunc.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/internal/strtod.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/internal/swap.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/memorystream.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/msinttypes/inttypes.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/msinttypes/stdint.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/rapidjson.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/reader.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../parsers/rapidjson/stream.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../materials/BlinnPhong.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../materials/Texture.cpp
 
 CMakeFiles/raytracer.dir/shapes/BVH.cpp.o: ../core/Material.h
 CMakeFiles/raytracer.dir/shapes/BVH.cpp.o: ../core/RayHitStructs.h

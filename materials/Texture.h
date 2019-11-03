@@ -13,10 +13,8 @@
 namespace rt{
 
 class BlinnPhong: public Material{
-public:
 
-private:
-    
+
 };
 
 

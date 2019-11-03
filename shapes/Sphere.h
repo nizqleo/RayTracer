@@ -31,6 +31,7 @@ public:
 	// Functions that need to be implemented, since Sphere is a subclass of Shape
 	//
 	Hit intersect(Ray ray);
+	Vec2f uvCompute(Vec3f point);
 
 private:
 

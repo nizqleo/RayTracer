@@ -213,9 +213,22 @@ CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/nizq/Downloads/computer graphic/RayTracer/materials/BlinnPhong.cpp" -o CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.s
 
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: CMakeFiles/raytracer.dir/flags.make
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o: ../materials/Texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/raytracer.dir/materials/Texture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/raytracer.dir/materials/Texture.cpp.o -c "/home/nizq/Downloads/computer graphic/RayTracer/materials/Texture.cpp"
+
+CMakeFiles/raytracer.dir/materials/Texture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raytracer.dir/materials/Texture.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/nizq/Downloads/computer graphic/RayTracer/materials/Texture.cpp" > CMakeFiles/raytracer.dir/materials/Texture.cpp.i
+
+CMakeFiles/raytracer.dir/materials/Texture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raytracer.dir/materials/Texture.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/nizq/Downloads/computer graphic/RayTracer/materials/Texture.cpp" -o CMakeFiles/raytracer.dir/materials/Texture.cpp.s
+
 CMakeFiles/raytracer.dir/shapes/BVH.cpp.o: CMakeFiles/raytracer.dir/flags.make
 CMakeFiles/raytracer.dir/shapes/BVH.cpp.o: ../shapes/BVH.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/raytracer.dir/shapes/BVH.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/raytracer.dir/shapes/BVH.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/raytracer.dir/shapes/BVH.cpp.o -c "/home/nizq/Downloads/computer graphic/RayTracer/shapes/BVH.cpp"
 
 CMakeFiles/raytracer.dir/shapes/BVH.cpp.i: cmake_force
@@ -228,7 +241,7 @@ CMakeFiles/raytracer.dir/shapes/BVH.cpp.s: cmake_force
 
 CMakeFiles/raytracer.dir/shapes/PlanerQuad.cpp.o: CMakeFiles/raytracer.dir/flags.make
 CMakeFiles/raytracer.dir/shapes/PlanerQuad.cpp.o: ../shapes/PlanerQuad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/raytracer.dir/shapes/PlanerQuad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/raytracer.dir/shapes/PlanerQuad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/raytracer.dir/shapes/PlanerQuad.cpp.o -c "/home/nizq/Downloads/computer graphic/RayTracer/shapes/PlanerQuad.cpp"
 
 CMakeFiles/raytracer.dir/shapes/PlanerQuad.cpp.i: cmake_force
@@ -241,7 +254,7 @@ CMakeFiles/raytracer.dir/shapes/PlanerQuad.cpp.s: cmake_force
 
 CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o: CMakeFiles/raytracer.dir/flags.make
 CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o: ../shapes/Sphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o -c "/home/nizq/Downloads/computer graphic/RayTracer/shapes/Sphere.cpp"
 
 CMakeFiles/raytracer.dir/shapes/Sphere.cpp.i: cmake_force
@@ -254,7 +267,7 @@ CMakeFiles/raytracer.dir/shapes/Sphere.cpp.s: cmake_force
 
 CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o: CMakeFiles/raytracer.dir/flags.make
 CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o: ../shapes/TriMesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o -c "/home/nizq/Downloads/computer graphic/RayTracer/shapes/TriMesh.cpp"
 
 CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.i: cmake_force
@@ -267,7 +280,7 @@ CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.s: cmake_force
 
 CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o: CMakeFiles/raytracer.dir/flags.make
 CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o: ../shapes/Triangle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o -c "/home/nizq/Downloads/computer graphic/RayTracer/shapes/Triangle.cpp"
 
 CMakeFiles/raytracer.dir/shapes/Triangle.cpp.i: cmake_force
@@ -292,6 +305,7 @@ raytracer_OBJECTS = \
 "CMakeFiles/raytracer.dir/lights/PointLight.cpp.o" \
 "CMakeFiles/raytracer.dir/main/main.cpp.o" \
 "CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.o" \
+"CMakeFiles/raytracer.dir/materials/Texture.cpp.o" \
 "CMakeFiles/raytracer.dir/shapes/BVH.cpp.o" \
 "CMakeFiles/raytracer.dir/shapes/PlanerQuad.cpp.o" \
 "CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o" \
@@ -313,6 +327,7 @@ raytracer: CMakeFiles/raytracer.dir/lights/AreaLight.cpp.o
 raytracer: CMakeFiles/raytracer.dir/lights/PointLight.cpp.o
 raytracer: CMakeFiles/raytracer.dir/main/main.cpp.o
 raytracer: CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.o
+raytracer: CMakeFiles/raytracer.dir/materials/Texture.cpp.o
 raytracer: CMakeFiles/raytracer.dir/shapes/BVH.cpp.o
 raytracer: CMakeFiles/raytracer.dir/shapes/PlanerQuad.cpp.o
 raytracer: CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o
@@ -320,7 +335,7 @@ raytracer: CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o
 raytracer: CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o
 raytracer: CMakeFiles/raytracer.dir/build.make
 raytracer: CMakeFiles/raytracer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable raytracer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable raytracer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/raytracer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

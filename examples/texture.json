@@ -1,0 +1,42 @@
+{"nbounces":1,
+ "pixel_sample_num":1,
+ "path_sample_num":1,
+ "camera":{
+ 	"type":"pinhole",
+ 	"width":800,
+ 	"height":800,
+	 "fov":90,
+	 "position":[-1, 0, 0],
+	 "lookAt":[0,0,0],
+	 "up":[0,0,1]
+ },
+ "scene":{
+ 	"backgroundcolor":[0.1, 0.1, 0.2],
+ 	"lightsources":[
+ 		{
+ 		"type":"pointlight", 
+ 		"position": [-1, 0, 0], 
+ 		"intensity":[1.0, 1.0, 1.0]
+		 } 
+ 	],
+ 	"shapes":[
+		{
+		"type":"PlanerQuad", 
+		"point1":[0, 1, 1],
+		"point2":[0, 1, -1],
+		"point3":[0, -1, -1],
+		"point4":[0, -1, 1],
+		"material":{
+			"ks":0.4,
+			"kd":0.8,
+			"specularexponent":3,
+			"texture":"wall.ppm",
+			"uv1":[1,1],
+			"uv2":[459,1],
+			"uv3":[459,679],
+			"uv4":[1,679]
+			}
+		}
+ 	]
+ }
+}

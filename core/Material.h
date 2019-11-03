@@ -25,16 +25,30 @@ public:
         diffusecolor = m.diffusecolor;
     }
 
-    /** L:from point to light
-     *  
+    /** The Blinn-Phong reflection model
+     * 
+     *  L:from point to light
+     *  N:norm at the point
+     *  V:from point to eye 
      **/
     Vec3f computeBPReflection(Vec3f intensity, Vec3f L, Vec3f N, Vec3f V);
+
+    /** The Blinn-Phong reflection model with texture
+     * 
+     **/
+    Vec3f computeBPTReflection(Vec3f intensity, Vec3f L, Vec3f N, Vec3f V, float u, float v);
+
+    bool isTexture;
 
 //private:
     float ks;
     float kd;
     int specularexponent;
     Vec3f diffusecolor;
+    Vec3f* textureImage;
+    int width;
+    int height;
+    Vec2f uv[4];
 };
 
 

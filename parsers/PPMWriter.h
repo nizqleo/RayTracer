@@ -21,6 +21,7 @@
 #define PPMWRITER_H_
 
 #include <iostream>
+#include <fstream>
 #include "math/geometry.h"
 
 
@@ -37,9 +38,31 @@ namespace PPMWriter{
 			char b = (char)(framebuffer[i].z);
 			ofs << r << g << b;
 		}
-
 		ofs.close();
+	}
 
+
+	template<typename T>
+	void PPMReader(int& width, int& height,Vec3<T>*& framebuffer, const char* filename){
+
+		std::ifstream ifs(filename, std::ios::out | std::ios::binary);
+		char s[100];
+		ifs.getline(s,100);
+		ifs >> width >> height;
+        std::cout<<width<<' '<<height<<std::endl;
+
+		float upbound;
+		ifs >> upbound;
+
+		framebuffer = new Vec3<T>[width * height];
+		for (uint32_t i = 0; i < height * width; ++i) {
+			int r,g,b;
+			ifs >> r >> g >> b;
+			framebuffer[i].x = (T)(r*1.0/upbound);
+			framebuffer[i].y = (T)(g*1.0/upbound);
+			framebuffer[i].z = (T)(b*1.0/upbound);
+		}
+		ifs.close();
 	}
 };
 

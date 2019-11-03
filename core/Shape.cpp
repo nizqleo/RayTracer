@@ -57,6 +57,15 @@ Shape* Shape::createShape(Value& shapeSpecs){
 	return NULL;
 }
 
+	Vec3f Shape::computeReflection(Vec3f incomingIntensity, Vec3f L, Vec3f V, Hit hit){
+		Vec3f N = hit.normVector;
+		if(material->isTexture == true){
+			Vec2f uv = this->uvCompute(hit.point);
+			return material->computeBPTReflection(incomingIntensity, L, N, V, uv.x, uv.y);
+		}
+		else
+			return material->computeBPReflection(incomingIntensity, L, N, V);
+	}
 
 
 } //namespace rt

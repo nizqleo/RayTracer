@@ -41,6 +41,11 @@ public:
 	Material* getMaterial(){
 		return material;
 	}
+
+	virtual Vec2f uvCompute(Vec3f point)=0;
+	/** call on son classes' uv computation and material	
+	 */ 
+	virtual Vec3f computeReflection(Vec3f incomingIntensity, Vec3f L, Vec3f V, Hit hit);
 protected:
 
 	Material * material;

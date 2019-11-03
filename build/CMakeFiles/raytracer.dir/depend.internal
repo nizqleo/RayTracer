@@ -110,6 +110,7 @@ CMakeFiles/raytracer.dir/core/LightSource.cpp.o
  /home/nizq/Downloads/computer graphic/RayTracer/core/LightSource.h
 CMakeFiles/raytracer.dir/core/Material.cpp.o
  ..//math/geometry.h
+ ..//parsers/PPMWriter.h
  ../parsers/rapidjson/allocators.h
  ../parsers/rapidjson/document.h
  ../parsers/rapidjson/encodedstream.h
@@ -124,6 +125,7 @@ CMakeFiles/raytracer.dir/core/Material.cpp.o
  ../parsers/rapidjson/internal/strfunc.h
  ../parsers/rapidjson/internal/strtod.h
  ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/istreamwrapper.h
  ../parsers/rapidjson/memorystream.h
  ../parsers/rapidjson/msinttypes/inttypes.h
  ../parsers/rapidjson/msinttypes/stdint.h
@@ -331,6 +333,31 @@ CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.o
  ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/materials/BlinnPhong.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/materials/BlinnPhong.h
+CMakeFiles/raytracer.dir/materials/Texture.cpp.o
+ ..//core/Material.h
+ ..//math/geometry.h
+ ../parsers/rapidjson/allocators.h
+ ../parsers/rapidjson/document.h
+ ../parsers/rapidjson/encodedstream.h
+ ../parsers/rapidjson/encodings.h
+ ../parsers/rapidjson/error/error.h
+ ../parsers/rapidjson/internal/biginteger.h
+ ../parsers/rapidjson/internal/diyfp.h
+ ../parsers/rapidjson/internal/ieee754.h
+ ../parsers/rapidjson/internal/meta.h
+ ../parsers/rapidjson/internal/pow10.h
+ ../parsers/rapidjson/internal/stack.h
+ ../parsers/rapidjson/internal/strfunc.h
+ ../parsers/rapidjson/internal/strtod.h
+ ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/memorystream.h
+ ../parsers/rapidjson/msinttypes/inttypes.h
+ ../parsers/rapidjson/msinttypes/stdint.h
+ ../parsers/rapidjson/rapidjson.h
+ ../parsers/rapidjson/reader.h
+ ../parsers/rapidjson/stream.h
+ /home/nizq/Downloads/computer graphic/RayTracer/materials/BlinnPhong.h
+ /home/nizq/Downloads/computer graphic/RayTracer/materials/Texture.cpp
 CMakeFiles/raytracer.dir/shapes/BVH.cpp.o
  ..//core/Material.h
  ..//core/RayHitStructs.h

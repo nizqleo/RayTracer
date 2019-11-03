@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/raytracer.dir/lights/PointLight.cpp.o"
   "CMakeFiles/raytracer.dir/main/main.cpp.o"
   "CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.o"
+  "CMakeFiles/raytracer.dir/materials/Texture.cpp.o"
   "CMakeFiles/raytracer.dir/shapes/BVH.cpp.o"
   "CMakeFiles/raytracer.dir/shapes/PlanerQuad.cpp.o"
   "CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o"

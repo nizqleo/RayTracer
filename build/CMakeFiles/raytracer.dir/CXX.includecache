@@ -42,6 +42,18 @@ cmath
 rapidjson/document.h
 ../math/rapidjson/document.h
 
+..//parsers/PPMWriter.h
+iostream
+-
+fstream
+-
+math/geometry.h
+../parsers/math/geometry.h
+
+..//shapes/Triangle.h
+core/Shape.h
+../shapes/core/Shape.h
+
 ../parsers/rapidjson/allocators.h
 rapidjson.h
 ../parsers/rapidjson/rapidjson.h
@@ -140,6 +152,14 @@ limits
 ../rapidjson.h
 ../parsers/rapidjson/rapidjson.h
 
+../parsers/rapidjson/istreamwrapper.h
+stream.h
+../parsers/rapidjson/stream.h
+iosfwd
+-
+ios
+-
+
 ../parsers/rapidjson/memorystream.h
 stream.h
 ../parsers/rapidjson/stream.h
@@ -220,13 +240,37 @@ rapidjson.h
 encodings.h
 ../parsers/rapidjson/encodings.h
 
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/Sphere.cpp
-Sphere.h
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/Sphere.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/Material.cpp
+iostream
+-
+fstream
+-
+rapidjson/document.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/rapidjson/document.h
+rapidjson/istreamwrapper.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/rapidjson/istreamwrapper.h
+parsers/PPMWriter.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/parsers/PPMWriter.h
+Material.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/Material.h
 
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/Sphere.h
-core/RayHitStructs.h
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/core/RayHitStructs.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/Material.h
+rapidjson/document.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/rapidjson/document.h
+math/geometry.h
+/home/nizq/Downloads/computer graphic/RayTracer/core/math/geometry.h
+
+/home/nizq/Downloads/computer graphic/RayTracer/shapes/PlanerQuad.cpp
+PlanerQuad.h
+/home/nizq/Downloads/computer graphic/RayTracer/shapes/PlanerQuad.h
+Triangle.h
+/home/nizq/Downloads/computer graphic/RayTracer/shapes/Triangle.h
+
+/home/nizq/Downloads/computer graphic/RayTracer/shapes/PlanerQuad.h
+shapes/Triangle.h
+/home/nizq/Downloads/computer graphic/RayTracer/shapes/shapes/Triangle.h
+
+/home/nizq/Downloads/computer graphic/RayTracer/shapes/Triangle.h
 core/Shape.h
 /home/nizq/Downloads/computer graphic/RayTracer/shapes/core/Shape.h
 

@@ -4,6 +4,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 project("Ray Tracer" C CXX)
 
+
 include_directories(
 parsers
 math
@@ -25,7 +26,7 @@ materials/*.cpp
 
 
 #raytracer executable
-add_executable(raytracer ${source} math/geometry.h ${rapidjson_headers})
+add_executable(raytracer ${source} math/geometry.h ${rapidjson_headers} )
 
 #json example executable
 add_executable(jsonexample examples/jsonExample.cpp ${rapidjson_headers})
