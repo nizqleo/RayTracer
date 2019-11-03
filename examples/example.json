@@ -1,6 +1,6 @@
 {"nbounces":3,
- "pixel_sample_num":1,
- "path_sample_num":4,
+ "pixel_sample_num":2,
+ "path_sample_num":3,
  "camera":{
  	"type":"pinhole",
  	"width":800,
@@ -22,7 +22,7 @@
  	"shapes":[
  		{
  		"type":"sphere", 
- 		"center": [-0.1, 0.3, 0.4], 
+ 		"center": [-0.1, 0.3, 0.1], 
  		"radius":0.3, 
  		"material":{
  			"ks":0.4,
@@ -32,15 +32,16 @@
  			}
 		},
 		{
-		"type":"Traingle", 
-		"point1":[0, 0, 0],
-		"point2":[0, -1, -0.4],
-		"point3":[0, 1, -0.4],
+		"type":"PlanerQuad", 
+		"point1":[1, 0, -0.3],
+		"point2":[0, 1, -0.4],
+		"point3":[-1, 0, -0.4],
+		"point4":[0, -1, -0.4],
 		"material":{
 			"ks":0.4,
 			"kd":0.8,
 			"specularexponent":3,
-			"diffusecolor":[1, 0, 0]
+			"diffusecolor":[0, 1, 0]
 			}
 		}
  	]

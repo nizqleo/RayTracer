@@ -97,6 +97,7 @@ public:
     { return Vec3(x * r, y * r, z * r); }
     Vec3 operator * (const Vec3 &v) const
     { return Vec3(x * v.x, y * v.y, z * v.z); }
+    void clamp(T upbound){x = std::min(upbound, x);y = std::min(upbound, y);z = std::min(upbound, z);}
     T dotProduct(const Vec3<T> &v) const
     { return x * v.x + y * v.y + z * v.z; }
     Vec3& operator /= (const T &r)

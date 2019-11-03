@@ -198,6 +198,7 @@ CMakeFiles/raytracer.dir/core/Shape.cpp.o
  ..//core/Shape.h
  ..//math/geometry.h
  ..//shapes/BVH.h
+ ..//shapes/PlanerQuad.h
  ..//shapes/Sphere.h
  ..//shapes/TriMesh.h
  ..//shapes/Triangle.h
@@ -357,6 +358,35 @@ CMakeFiles/raytracer.dir/shapes/BVH.cpp.o
  ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/shapes/BVH.cpp
  /home/nizq/Downloads/computer graphic/RayTracer/shapes/BVH.h
+CMakeFiles/raytracer.dir/shapes/PlanerQuad.cpp.o
+ ..//core/Material.h
+ ..//core/RayHitStructs.h
+ ..//core/Shape.h
+ ..//math/geometry.h
+ ..//shapes/Triangle.h
+ ../parsers/rapidjson/allocators.h
+ ../parsers/rapidjson/document.h
+ ../parsers/rapidjson/encodedstream.h
+ ../parsers/rapidjson/encodings.h
+ ../parsers/rapidjson/error/error.h
+ ../parsers/rapidjson/internal/biginteger.h
+ ../parsers/rapidjson/internal/diyfp.h
+ ../parsers/rapidjson/internal/ieee754.h
+ ../parsers/rapidjson/internal/meta.h
+ ../parsers/rapidjson/internal/pow10.h
+ ../parsers/rapidjson/internal/stack.h
+ ../parsers/rapidjson/internal/strfunc.h
+ ../parsers/rapidjson/internal/strtod.h
+ ../parsers/rapidjson/internal/swap.h
+ ../parsers/rapidjson/memorystream.h
+ ../parsers/rapidjson/msinttypes/inttypes.h
+ ../parsers/rapidjson/msinttypes/stdint.h
+ ../parsers/rapidjson/rapidjson.h
+ ../parsers/rapidjson/reader.h
+ ../parsers/rapidjson/stream.h
+ /home/nizq/Downloads/computer graphic/RayTracer/shapes/PlanerQuad.cpp
+ /home/nizq/Downloads/computer graphic/RayTracer/shapes/PlanerQuad.h
+ /home/nizq/Downloads/computer graphic/RayTracer/shapes/Triangle.h
 CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o
  ..//core/Material.h
  ..//core/RayHitStructs.h
@@ -416,6 +446,7 @@ CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o
  ..//core/RayHitStructs.h
  ..//core/Shape.h
  ..//math/geometry.h
+ ..//shapes/Triangle.h
  ../parsers/rapidjson/allocators.h
  ../parsers/rapidjson/document.h
  ../parsers/rapidjson/encodedstream.h
@@ -437,4 +468,3 @@ CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o
  ../parsers/rapidjson/reader.h
  ../parsers/rapidjson/stream.h
  /home/nizq/Downloads/computer graphic/RayTracer/shapes/Triangle.cpp
- /home/nizq/Downloads/computer graphic/RayTracer/shapes/Triangle.h

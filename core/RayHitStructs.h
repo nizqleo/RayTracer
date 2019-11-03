@@ -45,6 +45,31 @@ struct Ray{
 	Ray(Vec3f posi, Vec3f dire):OriginalPoint(posi), direction(dire){}
 
 	Vec3f reachOut(float t){return OriginalPoint+t*direction;}
+
+	float triangleIntersect(Vec3f p1, Vec3f p2, Vec3f p3){
+		Vec3f e1 = p2-p1;
+		Vec3f e2 = p3-p1;
+	    Vec3f pvec = direction.crossProduct(e2);
+		float det = e1.dotProduct(pvec);
+
+		if (det < 0) 
+			return triangleIntersect(p1, p3, p2);
+		
+		Vec3f tvec = OriginalPoint - p1;
+		float u = tvec.dotProduct(pvec)/det;
+
+		if (u < 0 || u > 1) return -1;
+
+		Vec3f qvec = tvec.crossProduct(e1);
+		float v = direction.dotProduct(qvec)/det;
+
+		if (v < 0 || u + v > 1) return -1;
+		float t = e2.dotProduct(qvec)/det;
+
+		if (t > 0) 
+			return t;
+		else return -1;
+	}
 };
 
 }

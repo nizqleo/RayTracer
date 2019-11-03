@@ -6,10 +6,15 @@
 #include "shapes/BVH.h"
 #include "shapes/Sphere.h"
 #include "shapes/Triangle.h"
+#include "shapes/PlanerQuad.h"
 #include "shapes/TriMesh.h"
 
 
 namespace rt{
+
+Shape::Shape(Material* m){
+	material = m;
+}
 
 Shape* Shape::createShape(Value& shapeSpecs){
     
@@ -33,11 +38,18 @@ Shape* Shape::createShape(Value& shapeSpecs){
 		return new Sphere(Vec3f(shapeSpecs["center"].GetArray()),
 				shapeSpecs["radius"].GetFloat(),
 				m);
-
-	}else if (shapeType.compare("Traingle")==0){
+	}
+	else if (shapeType.compare("Triangle")==0){
 		return new Triangle(Vec3f(shapeSpecs["point1"].GetArray()),
 				Vec3f(shapeSpecs["point2"].GetArray()),
                 Vec3f(shapeSpecs["point3"].GetArray()),
+				m);
+	}
+	else if (shapeType.compare("PlanerQuad")==0){
+		return new PlanerQuad(Vec3f(shapeSpecs["point1"].GetArray()),
+				Vec3f(shapeSpecs["point2"].GetArray()),
+                Vec3f(shapeSpecs["point3"].GetArray()),
+				Vec3f(shapeSpecs["point4"].GetArray()),
 				m);
 	}
 

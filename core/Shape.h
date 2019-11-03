@@ -10,7 +10,6 @@
 #include "core/RayHitStructs.h"
 #include "core/Material.h"
 
-
 using namespace rapidjson;
 
 namespace rt{
@@ -22,9 +21,7 @@ public:
 	// Constructors
 	//
 	Shape();
-	Shape(Material* m){
-		material = m;
-	}
+	Shape(Material* m);
 	//
 	// Destructor (must be overriden in subclass)
 	//

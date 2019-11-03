@@ -23,8 +23,11 @@ Vec3f Material::computeBPReflection(Vec3f intensity, Vec3f L, Vec3f N, Vec3f V){
 
     //diffuse factor
     Vec3f color = (diffusecolor*intensity)*(kd*diffuseValue);
+    //std::cout<<color<<' ';
     //specular factor
     color += ks*pow(specularValue, specularexponent)*intensity;
+    //std::cout<<color<<std::endl;
+
 
     return color;
 }

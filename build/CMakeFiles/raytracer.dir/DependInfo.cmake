@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/nizq/Downloads/computer graphic/RayTracer/main/main.cpp" "/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles/raytracer.dir/main/main.cpp.o"
   "/home/nizq/Downloads/computer graphic/RayTracer/materials/BlinnPhong.cpp" "/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.o"
   "/home/nizq/Downloads/computer graphic/RayTracer/shapes/BVH.cpp" "/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles/raytracer.dir/shapes/BVH.cpp.o"
+  "/home/nizq/Downloads/computer graphic/RayTracer/shapes/PlanerQuad.cpp" "/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles/raytracer.dir/shapes/PlanerQuad.cpp.o"
   "/home/nizq/Downloads/computer graphic/RayTracer/shapes/Sphere.cpp" "/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o"
   "/home/nizq/Downloads/computer graphic/RayTracer/shapes/TriMesh.cpp" "/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o"
   "/home/nizq/Downloads/computer graphic/RayTracer/shapes/Triangle.cpp" "/home/nizq/Downloads/computer graphic/RayTracer/build/CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o"

@@ -10,7 +10,7 @@
 
 namespace rt{
 
-	Camera::Camera(int height, int width, int fov, 	Vec3f position, Vec3f lookAt, Vec3f up):
+Camera::Camera(int height, int width, int fov, 	Vec3f position, Vec3f lookAt, Vec3f up):
 	height(height), width(width), fov(fov), position(position), lookAt(lookAt), up(up){
 		Vec3f forward = (lookAt-position).normalize(); 
 		up = up - up.dotProduct(forward)*forward;

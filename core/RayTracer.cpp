@@ -25,7 +25,7 @@ Vec3f RayTracer::TracePath(Scene* scene, Ray ray, int nbounces_left){
 	for(std::vector<LightSource*>::iterator p = scene->lightSources.begin(); p != scene->lightSources.end(); p++){
 		// point light processing 
 		if((*p)->isPointLight() && scene->shadowCheck(*p, hitEvent)){
-			color += material->computeBPReflection((*p)->intensity, (*p)->getPosition()-hitEvent.second.point, hitEvent.second.normVector, -ray.direction);
+			color += material->computeBPReflection((*p)->intensity, ((*p)->getPosition()-hitEvent.second.point).normalize(), hitEvent.second.normVector, -ray.direction);
 		}
 	}
 
@@ -61,6 +61,7 @@ Vec3f* RayTracer::render(Camera* camera, Scene* scene, int nbounces){
 	for(int i = 0; i < camera->getHeight(); i++){
 		for(int j = 0; j < camera->getWidth(); j++){
 			// for every pixel in the image, do.
+			//std::cout<<i<<' '<<j<<std::endl;
 			Vec3f pixel_color;
 			for(int round = 0; round < RayTracer::pixel_sample_num; round++){
 				Ray ray = camera->generate_ray(i, j);
@@ -84,6 +85,7 @@ Vec3f* RayTracer::tonemap(Vec3f* pixelbuffer, int size){
 
 	for(int i = 0; i < size; i++){
 		pixelbuffer[i] *= 255;
+		pixelbuffer[i].clamp(255);
 	}
 	return pixelbuffer;
 }
