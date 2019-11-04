@@ -22,9 +22,11 @@ Material::Material(Value& materialSpecs){
         isTexture = true;
         std::cout<<"start loading texture file "<<std::endl;
         PPMWriter::PPMReader(width, height, textureImage, materialSpecs["texture"].GetString());
-        uv[0] = Vec2f(materialSpecs["uv1"].GetArray());
-        uv[1] = Vec2f(materialSpecs["uv2"].GetArray());
-        uv[2] = Vec2f(materialSpecs["uv3"].GetArray());
+        if(materialSpecs.HasMember("uv1")){
+            uv[0] = Vec2f(materialSpecs["uv1"].GetArray());
+            uv[1] = Vec2f(materialSpecs["uv2"].GetArray());
+            uv[2] = Vec2f(materialSpecs["uv3"].GetArray());
+        }
         if(materialSpecs.HasMember("uv4"))
             uv[3] = Vec2f(materialSpecs["uv4"].GetArray());
         std::cout<<"finished texture file loading "<<textureImage[0]<<std::endl;

@@ -6,27 +6,17 @@
 
 #IncludeRegexTransform: 
 
-..//core/Material.h
+..//core/Camera.h
 rapidjson/document.h
 ../core/rapidjson/document.h
-math/geometry.h
-../core/math/geometry.h
+core/RayHitStructs.h
+../core/core/RayHitStructs.h
 
 ..//core/RayHitStructs.h
 math/geometry.h
 ../core/math/geometry.h
 stdlib.h
 -
-time.h
--
-
-..//core/Shape.h
-rapidjson/document.h
-../core/rapidjson/document.h
-core/RayHitStructs.h
-../core/core/RayHitStructs.h
-core/Material.h
-../core/core/Material.h
 
 ..//math/geometry.h
 cstdlib
@@ -41,18 +31,6 @@ cmath
 -
 rapidjson/document.h
 ../math/rapidjson/document.h
-
-..//parsers/PPMWriter.h
-iostream
--
-fstream
--
-math/geometry.h
-../parsers/math/geometry.h
-
-..//shapes/Triangle.h
-core/Shape.h
-../shapes/core/Shape.h
 
 ../parsers/rapidjson/allocators.h
 rapidjson.h
@@ -152,14 +130,6 @@ limits
 ../rapidjson.h
 ../parsers/rapidjson/rapidjson.h
 
-../parsers/rapidjson/istreamwrapper.h
-stream.h
-../parsers/rapidjson/stream.h
-iosfwd
--
-ios
--
-
 ../parsers/rapidjson/memorystream.h
 stream.h
 ../parsers/rapidjson/stream.h
@@ -240,37 +210,27 @@ rapidjson.h
 encodings.h
 ../parsers/rapidjson/encodings.h
 
-/home/nizq/Downloads/computer graphic/RayTracer/core/Material.cpp
+/home/nizq/Downloads/computer graphic/RayTracer/cameras/Pinhole.cpp
 iostream
 -
-fstream
+Pinhole.h
+/home/nizq/Downloads/computer graphic/RayTracer/cameras/Pinhole.h
+
+/home/nizq/Downloads/computer graphic/RayTracer/cameras/Pinhole.h
+core/Camera.h
+/home/nizq/Downloads/computer graphic/RayTracer/cameras/core/Camera.h
+
+/home/nizq/Downloads/computer graphic/RayTracer/cameras/ThinLens.cpp
+iostream
 -
-rapidjson/document.h
-/home/nizq/Downloads/computer graphic/RayTracer/core/rapidjson/document.h
-rapidjson/istreamwrapper.h
-/home/nizq/Downloads/computer graphic/RayTracer/core/rapidjson/istreamwrapper.h
-parsers/PPMWriter.h
-/home/nizq/Downloads/computer graphic/RayTracer/core/parsers/PPMWriter.h
-Material.h
-/home/nizq/Downloads/computer graphic/RayTracer/core/Material.h
+ThinLens.h
+/home/nizq/Downloads/computer graphic/RayTracer/cameras/ThinLens.h
 
-/home/nizq/Downloads/computer graphic/RayTracer/core/Material.h
-rapidjson/document.h
-/home/nizq/Downloads/computer graphic/RayTracer/core/rapidjson/document.h
+/home/nizq/Downloads/computer graphic/RayTracer/cameras/ThinLens.h
+core/Camera.h
+/home/nizq/Downloads/computer graphic/RayTracer/cameras/core/Camera.h
 math/geometry.h
-/home/nizq/Downloads/computer graphic/RayTracer/core/math/geometry.h
-
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/PlanerQuad.cpp
-PlanerQuad.h
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/PlanerQuad.h
-Triangle.h
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/Triangle.h
-
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/PlanerQuad.h
-shapes/Triangle.h
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/shapes/Triangle.h
-
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/Triangle.h
-core/Shape.h
-/home/nizq/Downloads/computer graphic/RayTracer/shapes/core/Shape.h
+/home/nizq/Downloads/computer graphic/RayTracer/cameras/math/geometry.h
+stdlib.h
+-
 

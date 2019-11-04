@@ -7,7 +7,6 @@
 
 #include "math/geometry.h"
 #include <stdlib.h>
-#include <time.h>
 
 namespace rt{
 

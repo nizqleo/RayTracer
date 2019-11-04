@@ -63,6 +63,9 @@ public:
     }
     friend Vec2 operator * (const T &r, const Vec2<T> &v)
     { return Vec2(v.x * r, v.y * r); }
+    T norm() const
+    { return x * x + y * y; }
+
     T x, y;
 };
 

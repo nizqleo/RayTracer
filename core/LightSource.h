@@ -34,7 +34,6 @@ public:
 
     friend class RayTracer;
 
-
 private:
     Vec3f intensity;
 };

@@ -73,7 +73,15 @@ Camera* Camera::createCamera(Value& cameraSpecs){
 				Vec3f(cameraSpecs["up"].GetArray()));
 
 	}else if (cameraType.compare("thinlens")==0){
-		return new ThinLens();
+		return new ThinLens(cameraSpecs["width"].GetInt(),
+				cameraSpecs["height"].GetInt(),
+				cameraSpecs["fov"].GetInt(),
+				Vec3f(cameraSpecs["position"].GetArray()),
+				Vec3f(cameraSpecs["lookAt"].GetArray()),
+				Vec3f(cameraSpecs["up"].GetArray()),
+				cameraSpecs["aperture"].GetFloat(),
+				cameraSpecs["focus_dist"].GetFloat()
+				);
 	}
 
 	return 0;

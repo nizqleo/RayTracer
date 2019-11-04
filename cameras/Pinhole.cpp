@@ -33,7 +33,6 @@ namespace rt{
 
 
 	Ray Pinhole::generate_ray(int i, int j){
-
 		// compute ray in camera coordinate first
 		float u = 2*tan(fov/2)/height;
 		Vec3f direction((width/2-j)*u,(height/2-i)*u,1);
