@@ -20,7 +20,6 @@ Material::Material(Value& materialSpecs){
     specularexponent = materialSpecs["specularexponent"].GetInt();
     if(materialSpecs.HasMember("texture")){
         isTexture = true;
-        std::cout<<"start loading texture file "<<std::endl;
         PPMWriter::PPMReader(width, height, textureImage, materialSpecs["texture"].GetString());
         if(materialSpecs.HasMember("uv1")){
             uv[0] = Vec2f(materialSpecs["uv1"].GetArray());
@@ -29,12 +28,11 @@ Material::Material(Value& materialSpecs){
         }
         if(materialSpecs.HasMember("uv4"))
             uv[3] = Vec2f(materialSpecs["uv4"].GetArray());
-        std::cout<<"finished texture file loading "<<textureImage[0]<<std::endl;
+        std::cout<<"finish loading texture file "<<materialSpecs["texture"].GetString()<<" with size: w:"<<width<<" h:"<<height<<std::endl;
     }
     else{
         diffusecolor = Vec3f(materialSpecs["diffusecolor"].GetArray());
     }
-    std::cout<<"finished material loading "<<std::endl;
 }
 
 Vec3f Material::computeBPReflection(Vec3f intensity, Vec3f L, Vec3f N, Vec3f V){

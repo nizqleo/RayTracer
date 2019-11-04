@@ -22,7 +22,7 @@ public:
 	//
 	Sphere();
 	Sphere(Vec3f center, float radius):center(center), radius(radius){};
-	Sphere(Vec3f center, float radius, Material* m):Shape(m),center(center), radius(radius){};
+	Sphere(Vec3f center, float radius, Material* m, Vec3f e):Shape(m,e),center(center), radius(radius){};
 
 	virtual ~Sphere(){}
 

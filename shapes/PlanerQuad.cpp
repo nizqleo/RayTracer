@@ -13,8 +13,11 @@ Hit PlanerQuad::intersect(Ray ray){
 
     // point: 1,2,3 edge:0,1
     float t = ray.triangleIntersect(point[0], point[1], point[2]);
-    if (t > 0) 
+    if (t > 0) {
+        //if(norm.z == -1)
+		    //std::cout<<"intersect"<<ray.direction.dotProduct(norm)<<"n"<<norm<<"d"<<ray.direction<<std::endl;
         return Hit(true, ray.reachOut(t), norm.dotProduct(ray.direction) < 0? norm:-norm);
+    }
     else {
         t = ray.triangleIntersect(point[0], point[3], point[2]);
         if (t > 0) 

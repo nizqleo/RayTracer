@@ -27,7 +27,7 @@ public:
         d11 = v1.dotProduct(v1);
         norm  = (point2-point1).crossProduct(point3-point1).normalize();
     }
-	Triangle(Vec3f point1, Vec3f point2, Vec3f point3, Material* m):Shape(m){
+	Triangle(Vec3f point1, Vec3f point2, Vec3f point3, Material* m, Vec3f e):Shape(m, e){
         TriPoint[0] = point1;
         TriPoint[1] = point2;
         TriPoint[2] = point3;

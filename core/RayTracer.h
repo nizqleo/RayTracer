@@ -31,10 +31,13 @@ public:
 	// take in pixelbuffer (size (height, width)), return a pixel_mapped_buffer
 	static Vec3f* tonemap(Vec3f* pixelbuffer, int size);
 
-	static Vec3f TracePath(Scene* scene, Ray ray, int nbounces_left);
+	static Vec3f TracePath(Scene* scene, Ray ray, int nbounces_left, Shape* startfrom);
 	
 	static int path_sample_num;
 	static int pixel_sample_num;
+	static int useRandom;
+	static int scale;
+
 
 private:
 	

@@ -34,11 +34,13 @@ void Scene::createScene(Value& scenespecs){
 	}
 }
 
-std::pair<Shape*, Hit> Scene::find_first_hit(Ray ray){
+std::pair<Shape*, Hit> Scene::find_first_hit(Ray ray, Shape* notthisone){
 	float min_dis = INT32_MAX;
 	Shape* min_shape = NULL;
 	Hit closestHit;
 	for(std::vector<Shape*>::iterator p = shapes.begin(); p != shapes.end(); p++){
+		if((*p)==notthisone)
+			continue;
 		Hit hit = (*p)->intersect(ray);
 		if(hit.exist != false){
 			float distance = (ray.OriginalPoint-hit.point).length();
@@ -54,6 +56,7 @@ std::pair<Shape*, Hit> Scene::find_first_hit(Ray ray){
 }
 
 bool Scene::shadowCheck(LightSource* p, std::pair<Shape*, Hit> Event){
+
 	Vec3f hit2light = p->getPosition()-Event.second.point;
 	float length = hit2light.length();
 	Ray ray(Event.second.point, hit2light/length);
@@ -72,6 +75,7 @@ bool Scene::shadowCheck(LightSource* p, std::pair<Shape*, Hit> Event){
 }
 
 void Scene::printScene(){
-	std::cout<<"shapes information:\n";
+	printf("\nScene information:\n");
+	std::cout<<"scene contains "<<lightSources.size()<<" point lightsource and "<<shapes.size()<<" shapes.\n";
 }
 } //namespace rt

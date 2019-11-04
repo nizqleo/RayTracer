@@ -49,7 +49,6 @@ namespace PPMWriter{
 		char s[100];
 		ifs.getline(s,100);
 		ifs >> width >> height;
-        std::cout<<width<<' '<<height<<std::endl;
 
 		float upbound;
 		ifs >> upbound;

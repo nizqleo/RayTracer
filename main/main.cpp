@@ -48,12 +48,15 @@ int main(int argc, char* argv[]){
 	// render parameters
 	RayTracer::path_sample_num = d["path_sample_num"].GetInt();
 	RayTracer::pixel_sample_num = d["pixel_sample_num"].GetInt();
+	RayTracer::useRandom = d["random"].GetInt();
+	RayTracer::scale = d["scale"].GetInt();
+	
 	//
 	// Main function, render scene
 	//
 	std::cout<<"rendering...\n";
 	Vec3f* pixelbuffer=RayTracer::render(camera, scene, d["nbounces"].GetInt());
-	std::cout<<"rendering finish.\n";
+	std::cout<<"finish rendering.\n";
 
 	//convert linear RGB pixel values [0-1] to range 0-255
 	Vec3f* pixel_mapped_buffer = RayTracer::tonemap(pixelbuffer, camera->getWidth() * camera->getHeight());

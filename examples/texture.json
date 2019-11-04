@@ -1,6 +1,8 @@
 {"nbounces":1,
  "pixel_sample_num":1,
  "path_sample_num":1,
+ "random":1,
+"scale":255,
  "camera":{
  	"type":"pinhole",
  	"width":800,

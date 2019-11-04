@@ -23,7 +23,7 @@ namespace rt{
 	 * this function implements the abstract function of the base Camera class
 	 */
 	void ThinLens::printCamera(){
-		printf("Camera information:\n");
+		printf("\nCamera information:\n");
 		printf("Type: thinlens camera width: %dpx, height: %dpx, fov:%d, focus:%f, aperture:%f \n", width, height, fov, focus_dist, aperture);
 	}
 

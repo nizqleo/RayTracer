@@ -27,8 +27,11 @@ namespace rt{
 	 * this function implements the abstract function of the base Camera class
 	 */
 	void Pinhole::printCamera(){
-		printf("Camera information:\n");
+		printf("\nCamera information:\n");
 		printf("Type: pinhole camera width: %dpx, height: %dpx, fov:%d \n", width, height, fov);
+		printf("Camera metrix:\n");
+		std::cout<<Cam2World<<std::endl;
+
 	}
 
 

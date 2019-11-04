@@ -21,7 +21,7 @@ public:
 	// Constructors
 	//
 	Shape();
-	Shape(Material* m);
+	Shape(Material* m, Vec3f emit);
 	//
 	// Destructor (must be overriden in subclass)
 	//
@@ -46,9 +46,12 @@ public:
 	/** call on son classes' uv computation and material	
 	 */ 
 	virtual Vec3f computeReflection(Vec3f incomingIntensity, Vec3f L, Vec3f V, Hit hit);
+
+	Vec3f emittence;
 protected:
 
 	Material * material;
+
 
 };
 

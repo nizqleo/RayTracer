@@ -28,7 +28,7 @@ public:
 	/* go through all the shape in the scene and sort by the distance.
 	 * find the one with smallest distance.
 	 */ 
-	std::pair<Shape*, Hit> find_first_hit(Ray ray);
+	std::pair<Shape*, Hit> find_first_hit(Ray ray, Shape* notthisone);
 
 	void printScene();
 

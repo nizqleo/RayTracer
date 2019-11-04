@@ -35,9 +35,6 @@ Camera::Camera(int height, int width, int fov, 	Vec3f position, Vec3f lookAt, Ve
 		Cam2World[3][1] = position.y; 
 		Cam2World[3][2] = position.z; 
 		Cam2World[3][3] =1;
-
-		
-		std::cout<<Cam2World<<std::endl;
 		
 	}
 

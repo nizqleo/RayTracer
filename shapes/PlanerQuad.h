@@ -28,9 +28,9 @@ public:
         v0[0] = point[1] - point[0];v0[1]=point[3] - point[0];
         d00[0] = v0[0].dotProduct(v0[0]);d00[1] = v0[1].dotProduct(v0[1]);
         d01[0] = v0[0].dotProduct(v1);d01[1] = v0[1].dotProduct(v1);
-        norm  = (point2- point1).crossProduct(point3-point1).normalize();
+        norm  = (point2- point1).crossProduct(point4-point1).normalize();
     }
-	PlanerQuad(Vec3f point1, Vec3f point2, Vec3f point3, Vec3f point4, Material* m):Shape(m){
+	PlanerQuad(Vec3f point1, Vec3f point2, Vec3f point3, Vec3f point4, Material* m, Vec3f e):Shape(m,e){
         point[0] = point1;
         point[1] = point2;
         point[2] = point3;
@@ -42,7 +42,7 @@ public:
         v0[0] = point[1] - point[0];v0[1]=point[3] - point[0];
         d00[0] = v0[0].dotProduct(v0[0]);d00[1] = v0[1].dotProduct(v0[1]);
         d01[0] = v0[0].dotProduct(v1);d01[1] = v0[1].dotProduct(v1);
-        norm  = (point2- point1).crossProduct(point3-point1).normalize();
+        norm  = (point2- point1).crossProduct(point4-point1).normalize();
     }
     //
 	// Functions that need to be implemented, since Sphere is a subclass of Shape

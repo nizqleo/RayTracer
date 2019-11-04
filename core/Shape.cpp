@@ -12,8 +12,9 @@
 
 namespace rt{
 
-Shape::Shape(Material* m){
+Shape::Shape(Material* m, Vec3f emit){
 	material = m;
+	emittence = emit;
 }
 
 Shape* Shape::createShape(Value& shapeSpecs){
@@ -33,24 +34,28 @@ Shape* Shape::createShape(Value& shapeSpecs){
 
 	Material* m = new Material(shapeSpecs["material"]);
 	
+	Vec3f emit;
+	if(shapeSpecs.HasMember("emittence")){
+		emit=Vec3f(shapeSpecs["emittence"].GetArray());
+	}
 	//return shape object based on shape specs
 	if (shapeType.compare("sphere")==0){
 		return new Sphere(Vec3f(shapeSpecs["center"].GetArray()),
 				shapeSpecs["radius"].GetFloat(),
-				m);
+				m,emit);
 	}
 	else if (shapeType.compare("Triangle")==0){
 		return new Triangle(Vec3f(shapeSpecs["point1"].GetArray()),
 				Vec3f(shapeSpecs["point2"].GetArray()),
                 Vec3f(shapeSpecs["point3"].GetArray()),
-				m);
+				m,emit);
 	}
 	else if (shapeType.compare("PlanerQuad")==0){
 		return new PlanerQuad(Vec3f(shapeSpecs["point1"].GetArray()),
 				Vec3f(shapeSpecs["point2"].GetArray()),
                 Vec3f(shapeSpecs["point3"].GetArray()),
 				Vec3f(shapeSpecs["point4"].GetArray()),
-				m);
+				m,emit);
 	}
 
     std::cerr<<"shape creating failed.\n";

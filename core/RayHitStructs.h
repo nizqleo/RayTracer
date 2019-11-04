@@ -35,11 +35,12 @@ struct Ray{
 	Ray(){}
 	Ray(Hit hit):OriginalPoint(hit.point){
 		// ramdonly generate direction.
-		direction = Vec3f(rand(), rand(), rand())-RAND_MAX;
+		direction = 2*Vec3f(drand48(), drand48(), drand48())-Vec3f(1,1,1);
 		if (direction.dotProduct(hit.normVector) < 0)
 			direction = -direction;	
-		
 		direction=direction.normalize();
+		//std::cout<<"rand"<<direction.dotProduct(hit.normVector)<<"hn"<<hit.normVector<<"d"<<direction<<'p'<<hit.point<<std::endl;
+
 	}
 	Ray(Vec3f posi, Vec3f dire):OriginalPoint(posi), direction(dire){}
 
